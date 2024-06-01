@@ -22,7 +22,9 @@ const shake = keyframes`
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 `;
 
-const SwitchContainer = styled.div`
+const SwitchContainer = styled.div.attrs({
+  className: 'sm:top-10 sm:left-10', // Tailwind classes for small screens
+})`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,6 +33,11 @@ const SwitchContainer = styled.div`
   left: 350px;
   flex-direction: column; /* Align children vertically */
   z-index: 10; /* Ensure the toggle is on top */
+
+  @media (max-width: 640px) {
+    top: 73px;
+    left: 350px; /* Tailwind's sm:left-10 */
+  }
 `;
 
 const Icon = styled.img`
@@ -75,7 +82,7 @@ const DarkMode = () => {
         position: 'relative' 
       }}
     >
-            <Navbar isDarkMode={isDarkMode} />
+      <Navbar isDarkMode={isDarkMode} />
 
       <SwitchContainer>
         <Icon 
@@ -99,15 +106,7 @@ const DarkMode = () => {
         </div>
       </ContentContainer>
     </div>
- 
-);
+  );
 };
 
-export default DarkMode
-
-
-
-
-
-
-
+export default DarkMode;
