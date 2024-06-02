@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@300&family=Caveat&family=Edu+TAS+Beginner:wght@400..700&family=Libre+Baskerville&family=Rubik+Glitch+Pop&family=Underdog&display=swap');
+
+ .hello1{
+  font-family: 'Anek Gujarati', sans-serif;
+}
+
+.hello2 {
+  font-family: 'Caveat', cursive;
+}
+
+.hello {
+  font-family: 'Edu TAS Beginner', sans-serif;
+  overflow: hidden; /* Hide the overflowing text */
+
+}
 
 
 code {

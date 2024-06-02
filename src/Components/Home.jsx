@@ -1,22 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from '../Assets/myimage-no-bg.png';
+import TextType from './TextType';
+import IconsRow from './HomeSvg';
 
 const Section = styled.section`
-  background-color: ${({ isDarkMode }) => (isDarkMode ? '#000000' : '#888888')};
+  background-color: ${({ isDarkMode }) => (isDarkMode ? '#000000' : '#aaaaaa')};
   color: ${({ isDarkMode }) => (isDarkMode ? '#ffffff' : '#000000')};
-  padding-top: 0; /* Adjust padding-top to move content up */
-  margin-top: -70px; /* Move the entire section up */
+  padding-top: 0;
+  margin-top: -70px;
 `;
 
 const Title = styled.h1`
   color: ${({ isDarkMode }) => (isDarkMode ? '#ffffff' : '#000000')};
-  margin-bottom: 16px; /* Adjust margin-bottom if needed */
+  margin-bottom: 16px;
 `;
 
 const Paragraph = styled.p`
   color: ${({ isDarkMode }) => (isDarkMode ? '#bbbbbb' : '#555555')};
-  margin-bottom: 24px; /* Adjust margin-bottom if needed */
+  margin-bottom: 24px;
 `;
 
 const StyledImageContainer = styled.div`
@@ -24,7 +26,7 @@ const StyledImageContainer = styled.div`
   width: 100%;
   max-width: 500px;
   overflow: hidden;
-  background-color: ${({ isDarkMode }) => (isDarkMode ? '#1a1a1a' : '#888888')};
+  background-color: ${({ isDarkMode }) => (isDarkMode ? '#1a1a1a' : '#D9D9D9')};
   @media (max-width: 1024px) {
     max-width: 300px;
     margin: auto;
@@ -45,63 +47,89 @@ const StyledOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: ${({ isDarkMode }) => 
-    isDarkMode ? 
-    'radial-gradient(circle, transparent 30%, black 70%)' : 
-    'radial-gradient(circle, transparent -70%, #888888 80%)'};
+  background: ${({ isDarkMode }) =>
+    isDarkMode
+      ? 'radial-gradient(circle, transparent -30%, #000000 70%)'
+      : 'radial-gradient(circle, transparent -30%, #aaaaaa 60%)'};
+`;
+
+const TypingContainer = styled.p`
+  height: 2em;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 1.875rem;
+  text-align: end;
+  margin-bottom: -0.5rem; /* Reduced margin-bottom */
 `;
 
 const HeroSection = ({ isDarkMode }) => {
   return (
-    <Section isDarkMode={isDarkMode} className="py-4 lg:py-8 "> {/* Adjust padding here */}
-      <div className="grid max-w-screen-xl px-4 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
+    <Section isDarkMode={isDarkMode} className="py-4 lg:py-8">
+      <div className={`grid max-w-screen-xl px-4 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12 ${isDarkMode ? 'dark' : ''}`}>
         <div className="lg:col-span-5">
           <StyledImageContainer isDarkMode={isDarkMode}>
-            <StyledImage 
-              src={Image} 
-              alt="mockup" 
-              isDarkMode={isDarkMode}
-            />
+            <StyledImage src={Image} alt="mockup" isDarkMode={isDarkMode} />
             <StyledOverlay isDarkMode={isDarkMode} />
           </StyledImageContainer>
         </div>
         <div className="lg:col-span-7 lg:col-start-6 mt-20">
-          <Title isDarkMode={isDarkMode} className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
-            Payments tool for software companies
-          </Title>
-          <Paragraph isDarkMode={isDarkMode} className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl">
-            From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.
-          </Paragraph>
-          <a 
-            href="#" 
-            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+          <TypingContainer className="hello font-light">
+            <TextType />
+          </TypingContainer>
+          <Title
+            isDarkMode={isDarkMode}
+            className="max-w-2xl mb-2 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl"
           >
-            Get started
-            <svg 
-              className="w-5 h-5 ml-2 -mr-1" 
-              fill="currentColor" 
-              viewBox="0 0 20 20" 
+            I AM <span className="text-purple-700">EREYOMI FUNMILOLA</span>
+          </Title>
+          <Paragraph
+            isDarkMode={isDarkMode}
+            className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-end"
+          >
+            I am a graduate of International Relations with a strong passion for software development.
+            Combining my understanding of global dynamics with technical expertise, I bring a unique
+            perspective to my work in the tech industry. I thrive on solving complex problems and creating
+            innovative solutions, always eager to learn and grow in this ever-evolving field. Whether it's
+            through coding or global policy analysis, I'm driven by a desire to make a meaningful impact.
+          </Paragraph>
+          <a
+            href="#"
+            className="inline-flex items-center justify-center px-0 py-0 mr-3 text-xs font-medium text-center border-4 border-purple-700 rounded-full hover:bg-purple-700 hover:text-white focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900 shadow-md font-black"
+            style={{ backgroundColor: 'transparent' }}
+          >
+            RESUME
+            <svg
+              style={{
+              color: isDarkMode ? '#ffffff' : '#000000',
+            }}
+
+              className="w-4 h-4  ml-0 font-black"
+              aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
             >
-              <path 
-                fillRule="evenodd" 
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" 
-                clipRule="evenodd"
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"
               />
             </svg>
           </a>
-          <a 
-            href="#" 
-            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+          <div
+            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center   dark:text-white "
             style={{
-              color: isDarkMode ? '#ffffff' : '#000000',
-              borderColor: isDarkMode ? '#444444' : '#cccccc',
-              backgroundColor: isDarkMode ? '#333333' : '#ffffff',
+              color: isDarkMode ? '#ffffff' : '#ffffff',
             }}
           >
-            Speak to Sales
-          </a> 
-        </div>                
+            <IconsRow
+            />
+          </div>
+        </div>
       </div>
     </Section>
   );

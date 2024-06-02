@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const Navbar = ({ isDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,8 +12,8 @@ const Navbar = ({ isDarkMode }) => {
     <nav className={`border-gray-200 ${isDarkMode ? 'dark:bg-gray-900' : 'bg-white'} shadow-lg mt-0 border-purple-500`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="#" className="h-8" alt="Cup of Purity " />
-          <span className={`self-center text-2xl font-semibold whitespace-nowrap text-purple-500`}>WELCOME</span>
+          <img src="https://www.metalsignscanada.com/cdn/shop/products/gloss-black-coffee.png?v=1624547459&width=800" className="h-8 rounded-full" alt="Cup of Purity " />
+          <span className={`self-center text-sm font-semibold whitespace-nowrap text-purple-500`}>WELCOME!</span>
         </a>
         <button
           onClick={toggleMenu}
@@ -28,7 +29,7 @@ const Navbar = ({ isDarkMode }) => {
           </svg>
         </button>
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
-          <ul className={`font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0`}>
+          <ul className={`font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg text-sm md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0`}>
             <li>
               <a href="#" className={`block py-2 px-3 ${isDarkMode ? 'text-white hover:text-blue-500  md:text-white md:hover:text-blue-500' : 'text-gray-900 hover:text-blue-700 hover:bg-gray-100 md:hover:bg-transparent'} rounded md:bg-transparent md:p-0`} aria-current="page">HOME</a>
             </li>

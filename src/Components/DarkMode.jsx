@@ -30,18 +30,18 @@ const SwitchContainer = styled.div.attrs({
   justify-content: center;
   position: absolute;
   top: 63px;
-  left: 350px;
+  left: 300px;
   flex-direction: column; /* Align children vertically */
   z-index: 10; /* Ensure the toggle is on top */
 
   @media (max-width: 640px) {
     top: 73px;
-    left: 350px; /* Tailwind's sm:left-10 */
+    left: 320px; /* Tailwind's sm:left-10 */
   }
 `;
 
 const Icon = styled.img`
-  width: 150px;
+  width: 200px;
   height: 200px;
   margin: 0 10px;
   cursor: pointer;
@@ -76,7 +76,7 @@ const DarkMode = () => {
   return (
     <div 
       style={{ 
-        background: isDarkMode ? '#000000' : 'linear-gradient(to right, #888888, #aaaaaa)', 
+        background: isDarkMode ? '#000000' : 'linear-gradient(to right, #D9D9D9, #D9D9D9)', 
         color: isDarkMode ? '#ffffff' : '#000000', 
         minHeight: '100vh', 
         position: 'relative' 
