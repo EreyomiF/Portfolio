@@ -3,13 +3,16 @@ import React, { useState } from 'react';
 const OrbitAnimation = () => {
   const [showIcons, setShowIcons] = useState(false);
 
+  const toggleIcons = () => {
+    setShowIcons((prevShowIcons) => !prevShowIcons);
+  };
+
   return (
     <div className="orbit">
       <ul className="orbit-wrap">
         <li
           className="orbit-center"
-          onMouseEnter={() => setShowIcons(true)}
-          onMouseLeave={() => setShowIcons(false)}
+          onClick={toggleIcons}
         >
           <i className="orbit-center__icon fas fa-code"></i>
         </li>

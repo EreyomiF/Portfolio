@@ -41,9 +41,9 @@ code {
 }
 
 .orbit {
-  width: 100%;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100px; /* Set the width of the orbit animation */
+  height: 50px; /* Set the height of the orbit animation */
+  margin: 0 auto; /* Center the orbit animation horizontally */
 }
 
 

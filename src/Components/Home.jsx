@@ -62,6 +62,35 @@ const TypingContainer = styled.p`
   margin-bottom: -0.5rem; /* Reduced margin-bottom */
 `;
 
+const StyledButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.5rem; /* Reduced padding */
+  margin-right: 0.5rem; /* Adjusted margin */
+  font-size: 0.7rem; /* Smaller font size */
+  text-align: center;
+  border: 2px solid #a855f7; /* Adjusted border width */
+  border-radius: 9999px; /* Fully rounded */
+  background-color: transparent;
+  color: ${({ isDarkMode }) => (isDarkMode ? '#ffffff' : '#000000')};
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 900;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #a855f7;
+    color: #ffffff;
+  }
+
+  svg {
+    margin-left: 0.25rem; /* Reduced margin */
+    color: ${({ isDarkMode }) => (isDarkMode ? '#ffffff' : '#000000')};
+    width: 16px; /* Smaller icon size */
+    height: 16px; /* Smaller icon size */
+  }
+`;
+
 const HeroSection = ({ isDarkMode }) => {
   return (
     <Section isDarkMode={isDarkMode} className="py-4 lg:py-8">
@@ -92,42 +121,30 @@ const HeroSection = ({ isDarkMode }) => {
             innovative solutions, always eager to learn and grow in this ever-evolving field. Whether it's
             through coding or global policy analysis, I'm driven by a desire to make a meaningful impact.
           </Paragraph>
-          <a
-            href="#"
-            className="inline-flex items-center justify-center px-0 py-0 mr-3 text-xs font-medium text-center border-4 border-purple-700 rounded-full hover:bg-purple-700 hover:text-white focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900 shadow-md font-black"
-            style={{ backgroundColor: 'transparent' }}
-          >
-            RESUME
-            <svg
-              style={{
-              color: isDarkMode ? '#ffffff' : '#000000',
-            }}
-
-              className="w-4 h-4  ml-0 font-black"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
+          <div className="flex justify-end items-center space-x-4 ">
+            <StyledButton
+              href="#"
+              isDarkMode={isDarkMode}
             >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"
-              />
-            </svg>
-          </a>
-          <div
-            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center   dark:text-white "
-            style={{
-              color: isDarkMode ? '#ffffff' : '#ffffff',
-            }}
-          >
-            <IconsRow
-            />
+              RESUME
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"
+                />
+              </svg>
+            </StyledButton>
+            <IconsRow  />
           </div>
         </div>
       </div>
