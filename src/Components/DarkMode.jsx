@@ -6,6 +6,7 @@ import HeroSection from './Home'; // Make sure to import the correct component
 import InstructionLightModeIcon from '../Assets/Group (1).png'; // Replace with your light mode instruction icon
 import InstructionDarkModeIcon from '../Assets/Group.png'; // Replace with your dark mode instruction icon
 import Navbar from './HeroNav';
+import Carousel from './MyCertificate';
 
 // Define the shake animation
 const shake = keyframes`
@@ -99,6 +100,7 @@ const DarkMode = () => {
       </SwitchContainer>
       <ContentContainer>
         <HeroSection isDarkMode={isDarkMode} />
+        <Carousel />
         <OrbitAnimation />
         <div>
           <h1>Hello, world!</h1>

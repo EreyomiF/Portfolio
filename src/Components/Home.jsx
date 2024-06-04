@@ -14,6 +14,9 @@ const Section = styled.section`
 const Title = styled.h1`
   color: ${({ isDarkMode }) => (isDarkMode ? '#ffffff' : '#000000')};
   margin-bottom: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const Paragraph = styled.p`
@@ -101,13 +104,13 @@ const HeroSection = ({ isDarkMode }) => {
             <StyledOverlay isDarkMode={isDarkMode} />
           </StyledImageContainer>
         </div>
-        <div className="lg:col-span-7 lg:col-start-6 mt-20">
+        <div className="lg:col-span-7 lg:col-start-6 mt-20 text-right lg:text-left">
           <TypingContainer className="hello font-light">
             <TextType />
           </TypingContainer>
           <Title
             isDarkMode={isDarkMode}
-            className="max-w-2xl mb-2 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl"
+            className="max-w-2xl mb-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-none"
           >
             I AM <span className="text-purple-700">EREYOMI FUNMILOLA</span>
           </Title>
@@ -144,7 +147,7 @@ const HeroSection = ({ isDarkMode }) => {
                 />
               </svg>
             </StyledButton>
-            <IconsRow  />
+            <IconsRow />
           </div>
         </div>
       </div>
