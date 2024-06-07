@@ -73,17 +73,18 @@ const StyledButton = styled.a`
   margin-right: 0.5rem; /* Adjusted margin */
   font-size: 0.7rem; /* Smaller font size */
   text-align: center;
-  border: 2px solid #a855f7; /* Adjusted border width */
+  border: 2px solid #6A0DAD; /* Adjusted border color */
   border-radius: 9999px; /* Fully rounded */
   background-color: transparent;
   color: ${({ isDarkMode }) => (isDarkMode ? '#ffffff' : '#000000')};
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow */
   font-weight: 900;
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-    background-color: #a855f7;
+    background-color: #6A0DAD;
     color: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
   }
 
   svg {
@@ -112,7 +113,7 @@ const HeroSection = ({ isDarkMode }) => {
             isDarkMode={isDarkMode}
             className="max-w-2xl mb-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-none"
           >
-            I AM <span className="text-purple-700">EREYOMI FUNMILOLA</span>
+            I AM <span className="text-purple-900">EREYOMI FUNMILOLA</span>
           </Title>
           <Paragraph
             isDarkMode={isDarkMode}

@@ -101,7 +101,6 @@ const DarkMode = () => {
       <ContentContainer>
         <HeroSection isDarkMode={isDarkMode} />
         <Carousel />
-        <OrbitAnimation />
         <div>
           <h1>Hello, world!</h1>
           <p>This is an example of a dark mode switch in a React app.</p>

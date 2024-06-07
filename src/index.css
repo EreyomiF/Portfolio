@@ -21,13 +21,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+/* Adjust the position of the OrbitAnimation component */
+/* Adjust the position of the OrbitAnimation component */
 .orbit-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  position: relative;
-  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Ensure it's above other content */
+  overflow: hidden; /* Optional: hide overflow */
 }
 
 .orbit {
@@ -36,6 +42,17 @@ code {
   position: relative;
   margin: 0 auto;
 }
+
+/* Rest of the CSS styles remain the same */
+.orbit-animation-container {
+  position: absolute;
+  top: 60%; /* Adjust to move it further down */
+  left: 0;
+  transform: translateY(-100%);
+  z-index: 10; /* Ensure it's above other content */
+}
+
+/* Rest of the CSS styles remain the same */
 
 .orbit-wrap {
   position: relative;
@@ -60,7 +77,7 @@ code {
   height: 1.8em;
   line-height: 1.8em;
   text-align: center;
-  background: hotpink;
+  background: rgba(202, 57, 144, 0.939);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -210,10 +227,7 @@ ul[class^=ring] li {
 ul[class^=ring] {
   border: none;
   box-shadow: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   padding: 0;
   border-radius: 50%;
   list-style: none;
@@ -225,7 +239,6 @@ ul[class^=ring] li {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform-origin: center;
   width: 1.6em;
   height: 1.6em;
   margin: -0.8em;
@@ -371,3 +384,27 @@ icons
   color: white;
 }
 
+
+/* src/styles/styles.css */
+.light-mode {
+    filter: brightness(30%) sepia(100%) hue-rotate(270deg) saturate(500%);
+}
+
+.dark-mode {
+    filter: brightness(30%) sepia(100%) hue-rotate(270deg) saturate(500%);
+}
+
+
+/* src/components/TopImage.css */
+.top-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+.image {
+  width: 80px; /* Adjust width as needed */
+  height: auto;
+  border-radius: 8px; /* Adjust border radius as needed */
+}

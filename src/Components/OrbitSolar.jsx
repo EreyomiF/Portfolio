@@ -4,11 +4,11 @@ const OrbitAnimation = () => {
   const [showIcons, setShowIcons] = useState(false);
 
   const toggleIcons = () => {
-    setShowIcons((prevShowIcons) => !prevShowIcons);
+    setShowIcons(prevShowIcons => !prevShowIcons);
   };
 
   return (
-    <div> {/* Wrap all elements in a parent div */}
+    <div className="fixed left-0 top-1/2 transform -translate-y-1/2 z-10">
       <div className="orbit-container">
         <div className="orbit">
           <ul className="orbit-wrap">
@@ -17,6 +17,7 @@ const OrbitAnimation = () => {
             </li>
             <li>
               <ul className={`ring-0 ${showIcons ? 'visible' : 'hidden'}`}>
+                <li><i className="orbit-icon fab fa-git"></i></li>
                 <li><i className="orbit-icon fab fa-git"></i></li>
                 <li><i className="orbit-icon fab fa-free-code-camp"></i></li>
                 <li><i className="orbit-icon fab fa-meetup"></i></li>
