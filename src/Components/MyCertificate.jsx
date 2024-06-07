@@ -7,6 +7,8 @@ import image5 from '../Assets/WhatsApp Image 2024-06-04 at 10.04.46 PM.jpeg';
 import TopImage from './ArrowDown'; // Import the TopImage component
 import BlurryImage from './BlurryImg';
 import OrbitAnimation from './OrbitSolar';
+import CertifyText from './CertifyText';
+import { BsBorder } from 'react-icons/bs';
 
 const Carousel = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -58,7 +60,16 @@ const Carousel = () => {
                             style={{ display: index === activeIndex ? 'block' : 'none' }}
                             data-carousel-item
                         >
-                            <img src={src} className="h-auto max-w-full border-4 border-purple-500" style={{ maxWidth: '100%', maxHeight: '100%' }} alt={`Slide ${index + 1}`} />
+<img 
+  src={src} 
+  className="h-auto max-w-full border-4" 
+  style={{ 
+    maxWidth: '100%', 
+    maxHeight: '100%', 
+    border: '4px solid #6A0DAD' 
+  }} 
+  alt={`Slide ${index + 1}`} 
+/>
                         </div>
                     ))}
                 </div>
@@ -67,21 +78,27 @@ const Carousel = () => {
                 <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between items-center pointer-events-none">
                     <button
                         type="button"
-                        className="w-6 h-6 flex items-center justify-center bg-transparent hover:bg-white/50 focus:outline-none pointer-events-auto rounded-full border-2 border-purple-500"
+                        className="w-8 h-8 flex items-center justify-center bg-transparent hover:bg-white/50 focus:outline-none pointer-events-auto rounded-full border-2 border-purple-500"
                         onClick={handlePrev}
-                        style={{ marginLeft: '-40px' }}
+                        style={{ 
+                         marginLeft: '-40px',  // Add comma here
+                         border: '2px solid #6A0DAD'  // Ensure proper border syntax
+                         }} 
                     >
-                        <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill={isDarkMode ? 'white' : 'black'} viewBox="0 0 24 24">
+                        <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill={isDarkMode ? 'white' : 'black'} viewBox="0 0 24 24">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m15 19-7-7 7-7"/>
                         </svg>
                     </button>
                     <button
                         type="button"
-                        className="w-6 h-6 flex items-center justify-center bg-transparent hover:bg-white/50 focus:outline-none pointer-events-auto rounded-full border-2 border-purple-500"
+                        className="w-8 h-8 flex items-center justify-center bg-transparent hover:bg-white/50 focus:outline-none pointer-events-auto rounded-full border-2 "
                         onClick={handleNext}
-                        style={{ marginRight: '-20px' }}
+                        style={{ 
+                         marginRight: '-20px',  // Add comma here
+                         border: '2px solid #6A0DAD'  // Ensure proper border syntax
+                        }} 
                     >
-                        <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill={isDarkMode ? 'white' : 'black'} viewBox="0 0 24 24">
+                        <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill={isDarkMode ? 'white' : 'black'} viewBox="0 0 24 24">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m9 5 7 7-7 7"/>
                         </svg>
                     </button>
@@ -94,6 +111,9 @@ const Carousel = () => {
             {/* OrbitAnimation component */}
             <div className="orbit-animation-container">
                 <OrbitAnimation />
+            </div>
+            <div className='absolute top-0 right-0 mr-4 mt-4'>
+            <CertifyText isDarkMode={isDarkMode} />
             </div>
         </div>
     );

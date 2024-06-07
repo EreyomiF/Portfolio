@@ -9,7 +9,7 @@ const BlurryImage = ({ isDarkMode }) => {
         className="max-w-lg transition-all duration-300 w-64 h-96 blur-sm hover:blur-none" 
         src={myImage} 
         alt="image description" 
-        style={{ borderRadius: '30%', transform: 'translateY(-150px)' }}  // Move the image up by 450px
+        style={{ borderRadius: '10%', transform: 'translateY(-150px)' }}  // Move the image up by 450px
       />
       <p className="caption mr-20 mb-2 hello relative text-sm transform translate-y-[-120px]">ME!!</p> {/* Move caption up */}
       <img 
