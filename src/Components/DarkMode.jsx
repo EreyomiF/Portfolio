@@ -6,7 +6,9 @@ import HeroSection from './Home'; // Make sure to import the correct component
 import InstructionLightModeIcon from '../Assets/Group (1).png'; // Replace with your light mode instruction icon
 import InstructionDarkModeIcon from '../Assets/Group.png'; // Replace with your dark mode instruction icon
 import Navbar from './HeroNav';
+import MainComponent from './SecondSection';
 import Carousel from './MyCertificate';
+import GridComponent from './SecondSection';
 
 // Define the shake animation
 const shake = keyframes`
@@ -100,7 +102,7 @@ const DarkMode = () => {
       </SwitchContainer>
       <ContentContainer>
         <HeroSection isDarkMode={isDarkMode} />
-        <Carousel />
+        <GridComponent isDarkMode={isDarkMode} />
         <div>
           <h1>Hello, world!</h1>
           <p>This is an example of a dark mode switch in a React app.</p>

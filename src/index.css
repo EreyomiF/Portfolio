@@ -22,34 +22,12 @@ code {
 }
 
 /* Adjust the position of the OrbitAnimation component */
-/* Adjust the position of the OrbitAnimation component */
-.orbit-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10; /* Ensure it's above other content */
-  overflow: hidden; /* Optional: hide overflow */
-}
 
 .orbit {
   width: 25em;
   height: 25em;
   position: relative;
   margin: 0 auto;
-}
-
-/* Rest of the CSS styles remain the same */
-.orbit-animation-container {
-  position: absolute;
-  top: 60%; /* Adjust to move it further down */
-  left: 0;
-  transform: translateY(-100%);
-  z-index: 10; /* Ensure it's above other content */
 }
 
 /* Rest of the CSS styles remain the same */
@@ -126,19 +104,19 @@ ul[class^=ring] li {
 }
 
 .ring-0 > *:nth-of-type(1) {
-  transform: rotate(95deg) translate(9em) rotate(-95deg);
+  transform: rotate(95deg) translate(8em) rotate(-95deg);
 }
 
 .ring-0 > *:nth-of-type(2) {
-  transform: rotate(190deg) translate(9em) rotate(-190deg);
+  transform: rotate(190deg) translate(8em) rotate(-190deg);
 }
 
 .ring-0 > *:nth-of-type(3) {
-  transform: rotate(285deg) translate(9em) rotate(-285deg);
+  transform: rotate(285deg) translate(8em) rotate(-285deg);
 }
 
 .ring-0 > *:nth-of-type(4) {
-  transform: rotate(380deg) translate(9em) rotate(-380deg);
+  transform: rotate(380deg) translate(8em) rotate(-380deg);
 }
 
 .ring-1 {
@@ -151,15 +129,15 @@ ul[class^=ring] li {
 }
 
 .ring-1 > *:nth-of-type(1) {
-  transform: rotate(126.6666666667deg) translate(7em) rotate(-126.6666666667deg);
+  transform: rotate(126.6666666667deg) translate(6em) rotate(-126.6666666667deg);
 }
 
 .ring-1 > *:nth-of-type(2) {
-  transform: rotate(253.3333333333deg) translate(7em) rotate(-253.3333333333deg);
+  transform: rotate(253.3333333333deg) translate(6em) rotate(-253.3333333333deg);
 }
 
 .ring-1 > *:nth-of-type(3) {
-  transform: rotate(380deg) translate(7em) rotate(-380deg);
+  transform: rotate(380deg) translate(6em) rotate(-380deg);
 }
 
 .ring-2 {
@@ -176,7 +154,7 @@ ul[class^=ring] li {
 }
 
 .ring-2 > *:nth-of-type(2) {
-  transform: rotate(95deg) translate(7.5em) rotate(-95deg);
+  transform: rotate(95deg) translate(5em) rotate(-95deg);
 }
 
 .ring-2 > *:nth-of-type(3) {
