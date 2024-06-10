@@ -22,7 +22,7 @@ const FavQuote = ({ isDarkMode }) => {
       style={{  transform: 'translateY(-35px)',marginRight: '150px' }}
         >
        "Stay hungry, Stay foolish" <br />
-       ________________Steve Jobs
+       __Steve Jobs
       </p>
     </div>
   );

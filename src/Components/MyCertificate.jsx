@@ -62,7 +62,7 @@ const Carousel = () => {
                                 style={{ 
                                     maxWidth: '100%', 
                                     maxHeight: '100%', 
-                                    border: '4px solid #6A0DAD' 
+                                    border: '2px solid #6A0DAD' 
                                 }} 
                                 alt={`Slide ${index + 1}`} 
                             />

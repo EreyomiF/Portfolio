@@ -7,7 +7,7 @@ import OrbitAnimation from './OrbitSolar';
 
 const GridComponent = ({ isDarkMode }) => {
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 mb-8 h-full">
             {/* Left grid */}
             <div className="col-span-1 lg:col-span-2 flex flex-col justify-start items-center w-full mx-auto relative">
                 {/* First image on the left */}

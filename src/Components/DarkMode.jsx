@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import styled, { keyframes, css } from 'styled-components';
-import OrbitAnimation from './OrbitSolar';
 import LightBulbIcon from '../Assets/light bulb (1).png'; // Use your light bulb image
 import HeroSection from './Home'; // Make sure to import the correct component
 import InstructionLightModeIcon from '../Assets/Group (1).png'; // Replace with your light mode instruction icon
 import InstructionDarkModeIcon from '../Assets/Group.png'; // Replace with your dark mode instruction icon
 import Navbar from './HeroNav';
-import MainComponent from './SecondSection';
-import Carousel from './MyCertificate';
 import GridComponent from './SecondSection';
 
 // Define the shake animation
@@ -25,21 +22,19 @@ const shake = keyframes`
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 `;
 
-const SwitchContainer = styled.div.attrs({
-  className: 'sm:top-10 sm:left-10', // Tailwind classes for small screens
-})`
+const SwitchContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 63px;
+  top: 65px;
   left: 300px;
   flex-direction: column; /* Align children vertically */
   z-index: 10; /* Ensure the toggle is on top */
 
   @media (max-width: 640px) {
-    top: 73px;
-    left: 320px; /* Tailwind's sm:left-10 */
+    top: 73px; /* Move up on small screens */
+    left: 300px; /* Adjust left position if needed */
   }
 `;
 
@@ -82,7 +77,9 @@ const DarkMode = () => {
         background: isDarkMode ? '#000000' : 'linear-gradient(to right, #D9D9D9, #D9D9D9)', 
         color: isDarkMode ? '#ffffff' : '#000000', 
         minHeight: '100vh', 
-        position: 'relative' 
+        position: 'relative',
+        margin: 0,  // Reset margin
+        padding: 0, // Reset padding
       }}
     >
       <Navbar isDarkMode={isDarkMode} />
@@ -103,10 +100,6 @@ const DarkMode = () => {
       <ContentContainer>
         <HeroSection isDarkMode={isDarkMode} />
         <GridComponent isDarkMode={isDarkMode} />
-        <div>
-          <h1>Hello, world!</h1>
-          <p>This is an example of a dark mode switch in a React app.</p>
-        </div>
       </ContentContainer>
     </div>
   );

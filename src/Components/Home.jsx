@@ -63,6 +63,10 @@ const TypingContainer = styled.p`
   font-size: 1.875rem;
   text-align: end;
   margin-bottom: -0.5rem; /* Reduced margin-bottom */
+  
+  @media (min-width: 1240px) {
+    padding-right: 3.5rem; /* Add padding to move the text to the right on large screens */
+  }
 `;
 
 const StyledButton = styled.a`
@@ -95,6 +99,17 @@ const StyledButton = styled.a`
   }
 `;
 
+const IconsRowContainer = styled.div`
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem; /* Add gap between StyledButton and IconsRow */
+
+  @media (min-width: 1240px) {
+    padding-right: 3rem; /* Add padding to the right on large screens */
+  }
+`;
+
 const HeroSection = ({ isDarkMode }) => {
   return (
     <Section isDarkMode={isDarkMode} className="py-4 lg:py-8">
@@ -111,7 +126,7 @@ const HeroSection = ({ isDarkMode }) => {
           </TypingContainer>
           <Title
             isDarkMode={isDarkMode}
-            className="max-w-2xl mb-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-none"
+            className="max-w-2xl mb-2 text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight leading-none text-end"
           >
             I AM <span className="text-purple-900">EREYOMI FUNMILOLA</span>
           </Title>
@@ -125,11 +140,8 @@ const HeroSection = ({ isDarkMode }) => {
             innovative solutions, always eager to learn and grow in this ever-evolving field. Whether it's
             through coding or global policy analysis, I'm driven by a desire to make a meaningful impact.
           </Paragraph>
-          <div className="flex justify-end items-center space-x-4 ">
-            <StyledButton
-              href="#"
-              isDarkMode={isDarkMode}
-            >
+          <IconsRowContainer>
+            <StyledButton href="#" isDarkMode={isDarkMode}>
               RESUME
               <svg
                 aria-hidden="true"
@@ -149,7 +161,7 @@ const HeroSection = ({ isDarkMode }) => {
               </svg>
             </StyledButton>
             <IconsRow />
-          </div>
+          </IconsRowContainer>
         </div>
       </div>
     </Section>
