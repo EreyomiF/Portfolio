@@ -393,3 +393,11 @@ icons
   top: -57px; /* Adjust the value as needed */
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+

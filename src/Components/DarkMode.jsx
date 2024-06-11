@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import LightBulbIcon from '../Assets/light bulb (1).png'; // Use your light bulb image
 import HeroSection from './Home'; // Make sure to import the correct component
@@ -6,6 +6,10 @@ import InstructionLightModeIcon from '../Assets/Group (1).png'; // Replace with 
 import InstructionDarkModeIcon from '../Assets/Group.png'; // Replace with your dark mode instruction icon
 import Navbar from './HeroNav';
 import GridComponent from './SecondSection';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import Experience from './WorkExperience';
+
 
 // Define the shake animation
 const shake = keyframes`
@@ -65,6 +69,15 @@ const DarkMode = () => {
   const [isDarkMode, setDarkMode] = useState(true); // Default to dark mode
   const [isClicked, setIsClicked] = useState(false);
 
+  useEffect(() => {
+    // Initialize AOS
+    window.AOS.init({
+      duration: 1200, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once - while scrolling down
+      offset: 200, // Offset (in px) from the original trigger point
+    });
+  }, []);
+
   const toggleDarkMode = () => {
     setDarkMode(!isDarkMode);
     setIsClicked(true);
@@ -91,15 +104,18 @@ const DarkMode = () => {
           isDarkMode={isDarkMode} 
           isClicked={isClicked} 
           onClick={toggleDarkMode} 
+          
         />
         <InstructionIcon 
           src={isDarkMode ? InstructionDarkModeIcon : InstructionLightModeIcon} 
           alt="instruction icon" 
+          
         />
       </SwitchContainer>
       <ContentContainer>
-        <HeroSection isDarkMode={isDarkMode} />
-        <GridComponent isDarkMode={isDarkMode} />
+        <HeroSection isDarkMode={isDarkMode} data-aos="fade-up" />
+        <GridComponent isDarkMode={isDarkMode} data-aos="fade-up" />
+        <Experience />
       </ContentContainer>
     </div>
   );

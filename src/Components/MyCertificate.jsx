@@ -42,13 +42,13 @@ const Carousel = () => {
     return (
         <div className="relative mt-4 flex flex-col items-center">
             {/* Image at the top */}
-            <div className="relative flex justify-center w-full " style={{ marginLeft: '-100px' }}>
+            <div className="relative flex justify-center w-full" style={{ marginLeft: '-100px' }}>
                 <TopImage isDarkMode={isDarkMode} /> {/* Pass the dark mode state */}
             </div>
 
             {/* Carousel wrapper */}
             <div className="w-60 h-40 relative max-w-full mx-auto dark:bg-gray-800">
-                <div className="relative w-full h-full overflow-hidden rounded-lg">
+            <div className="relative w-full h-full overflow-hidden rounded-lg">
                     {images.map((src, index) => (
                         <div
                             key={index}
@@ -62,43 +62,58 @@ const Carousel = () => {
                                 style={{ 
                                     maxWidth: '100%', 
                                     maxHeight: '100%', 
-                                    border: '2px solid #6A0DAD' 
+                                    border: '4px solid #6A0DAD' 
                                 }} 
                                 alt={`Slide ${index + 1}`} 
                             />
                         </div>
                     ))}
                 </div>
+            </div>
 
-                {/* Slider controls */}
-                <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between items-center pointer-events-none">
-                    <button
-                        type="button"
-                        className="w-8 h-8 flex items-center justify-center bg-transparent hover:bg-white/50 focus:outline-none pointer-events-auto rounded-full border-2 border-purple-500"
-                        onClick={handlePrev}
-                        style={{ 
-                            marginLeft: '-40px',  
-                            border: '2px solid #6A0DAD'  
-                        }} 
-                    >
-                        <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill={isDarkMode ? 'white' : 'black'} viewBox="0 0 24 24">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m15 19-7-7 7-7"/>
-                        </svg>
-                    </button>
-                    <button
-                        type="button"
-                        className="w-8 h-8 flex items-center justify-center bg-transparent hover:bg-white/50 focus:outline-none pointer-events-auto rounded-full border-2"
-                        onClick={handleNext}
-                        style={{ 
-                            marginRight: '-20px',  
-                            border: '2px solid #6A0DAD'  
-                        }} 
-                    >
-                        <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill={isDarkMode ? 'white' : 'black'} viewBox="0 0 24 24">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m9 5 7 7-7 7"/>
-                        </svg>
-                    </button>
-                </div>
+            {/* Slider controls */}
+            <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between items-center pointer-events-none">
+                <button
+                    type="button"
+                    className="w-8 h-8 flex items-center justify-center bg-transparent hover:bg-white/50 focus:outline-none pointer-events-auto rounded-full border-2 border-purple-500"
+                    onClick={handlePrev}
+                    style={{ 
+                        marginLeft: '-50px',  
+                        border: '2px solid #6A0DAD',
+                        top: '50%',
+                        // Adjust margin for extra small screens
+                        '@media (max-width: 640px)': {
+                            marginLeft: '-20px',
+                            top: '50%',
+
+                        },
+                    }} 
+                >
+                    <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill={isDarkMode ? 'white' : 'black'} viewBox="0 0 24 24">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m15 19-7-7 7-7"/>
+                    </svg>
+                </button>
+                <button
+                    type="button"
+                    className="w-8 h-8 flex items-center justify-center bg-transparent hover:bg-white/50 focus:outline-none pointer-events-auto rounded-full border-2"
+                    onClick={handleNext}
+                    style={{ 
+                        marginRight: '-20px',  
+                        border: '2px solid #6A0DAD',
+                        top: '50%',
+
+                        // Adjust margin for extra small screens
+                        '@media (max-width: 640px)': {
+                            marginRight: '-20px',
+                            top: '50%',
+
+                        },
+                    }} 
+                >
+                    <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill={isDarkMode ? 'white' : 'black'} viewBox="0 0 24 24">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m9 5 7 7-7 7"/>
+                    </svg>
+                </button>
             </div>
         </div>
     );

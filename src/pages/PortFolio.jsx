@@ -4,9 +4,9 @@ import DarkMode from '../Components/DarkMode';
 
 const App = () => {
   return (
-    <div className="">
+    <>
     <DarkMode />
-    </div>
+    </>
   );
 };
 
