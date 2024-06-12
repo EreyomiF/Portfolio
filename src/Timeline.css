@@ -30,6 +30,7 @@
     background-color: var(--fg);
     border-radius: 0.25em;
     color: var(--bg);
+    border-color: purple; /* Change the border color to purple */
     cursor: pointer;
     padding: 0.375em 0.75em;
     transition: background-color calc(var(--trans-dur) / 2) linear, color var(--trans-dur);
@@ -140,7 +141,7 @@
 
 .experience-root .timeline__item-body-content {
     background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Blurry effect */
+    backdrop-filter: blur(100px); /* Blurry effect */
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Blurry shadow */
     border-radius: 10px; /* Rounded corners */
     opacity: 0;
@@ -174,13 +175,6 @@
 }
 
 /* Dark theme */
-@media (prefers-color-scheme: dark) {
-    .experience-root {
-        --bg: hsl(var(--hue), 10%, 10%);
-        --fg: hsl(var(--hue), 10%, 90%);
-        --primary: hsl(var(--hue), 90%, 70%);
-    }
-}
 
 /* Additional styles for the unordered list */
 .experience-root .timeline__item-body-content ul {
@@ -192,4 +186,23 @@
     margin-bottom: 0.5em; /* Adjust as needed */
     line-height: 1.5; /* Adjust as needed */
     font-size: 1em; /* Adjust as needed */
+}
+
+.experience-root .timeline__arrow-icon path {
+    stroke: white; /* Make the SVG path white */
+    fill: white; /* Make the SVG fill white (if applicable) */
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    .experience-root {
+        --bg: hsl(var(--hue), 10%, 10%);
+        --fg: hsl(var(--hue), 10%, 90%);
+        --primary: hsl(var(--hue), 90%, 70%);
+    }
+
+    /* Set the stroke color of the SVG path to white */
+    .experience-root .timeline__arrow-icon path {
+        stroke: white;
+    }
 }

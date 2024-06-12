@@ -12,7 +12,7 @@ const Navbar = ({ isDarkMode }) => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="https://www.metalsignscanada.com/cdn/shop/products/gloss-black-coffee.png?v=1624547459&width=800" className="h-8 rounded-full" alt="Cup of Purity " />
-          <span className={`self-center text-sm font-semibold whitespace-nowrap text-purple-700`}>WELCOME!</span>
+          <span className={`self-center text-sm hello font-semibold whitespace-nowrap text-purple-700`}>WELCOME!</span>
         </a>
         <button
           onClick={toggleMenu}

@@ -6,6 +6,7 @@ import Carousel from './MyCertificate';
 import OrbitAnimation from './OrbitSolar';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
+import GridHeader from './GridHeader'; // Import the GridHeader component
 
 const GridComponent = ({ isDarkMode }) => {
     useEffect(() => {
@@ -57,32 +58,38 @@ const GridComponent = ({ isDarkMode }) => {
     }, []);
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 mb-8 h-full overflow-hidden">
-            {/* Left grid */}
-            <div
-                className="col-span-1 lg:col-span-2 flex flex-col justify-start items-center w-full relative aos-left"
-            >
-                {/* First image on the left */}
-                <Carousel />
-                <div className="w-full flex justify-center mt-8">
-                    <OrbitAnimation isDarkMode={isDarkMode} />
+        <div className="w-full h-full flex flex-col items-center">
+            {/* Header */}
+            <GridHeader /> {/* Include the GridHeader component */}
+
+            {/* Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 mb-8 w-full h-full overflow-hidden">
+                {/* Left grid */}
+                <div
+                    className="col-span-1 lg:col-span-2 flex flex-col justify-start items-center w-full relative aos-left"
+                >
+                    {/* First image on the left */}
+                    <Carousel />
+                    <div className="w-full flex justify-center mt-8">
+                        <OrbitAnimation isDarkMode={isDarkMode} />
+                    </div>
                 </div>
-            </div>
-            {/* Center grid */}
-            <div
-                className="col-span-1 lg:col-span-1 flex justify-center items-start w-full mt-8 lg:mt-40 aos-center"
-            >
-                {/* Image in the center */}
-                <BlurryImage isDarkMode={isDarkMode} />
-            </div>
-            {/* Right grid */}
-            <div
-                className="col-span-1 lg:col-span-2 flex flex-col justify-start items-center w-full aos-right"
-            >
-                {/* First content on the right */}
-                <CertifyText isDarkMode={isDarkMode} />
-                {/* Second content on the right */}
-                <MyHobby isDarkMode={isDarkMode} />
+                {/* Center grid */}
+                <div
+                    className="col-span-1 lg:col-span-1 flex justify-center items-start w-full mt-8 lg:mt-40 aos-center"
+                >
+                    {/* Image in the center */}
+                    <BlurryImage isDarkMode={isDarkMode} />
+                </div>
+                {/* Right grid */}
+                <div
+                    className="col-span-1 lg:col-span-2 flex flex-col justify-start items-center w-full aos-right"
+                >
+                    {/* First content on the right */}
+                    <CertifyText isDarkMode={isDarkMode} />
+                    {/* Second content on the right */}
+                    <MyHobby isDarkMode={isDarkMode} />
+                </div>
             </div>
         </div>
     );

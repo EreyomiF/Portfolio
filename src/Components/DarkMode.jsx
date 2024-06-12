@@ -9,6 +9,8 @@ import GridComponent from './SecondSection';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import Experience from './WorkExperience';
+import ContactMe from './ContactForm';
+import PandaLogin from './ContactForm';
 
 
 // Define the shake animation
