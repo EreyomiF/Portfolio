@@ -11,6 +11,7 @@ import AOS from 'aos';
 import Experience from './WorkExperience';
 import ContactMe from './ContactForm';
 import PandaLogin from './ContactForm';
+import ContactForm from './ContactForm';
 
 
 // Define the shake animation
@@ -118,6 +119,7 @@ const DarkMode = () => {
         <HeroSection isDarkMode={isDarkMode} data-aos="fade-up" />
         <GridComponent isDarkMode={isDarkMode} data-aos="fade-up" />
         <Experience />
+        <ContactForm isDarkMode={isDarkMode} />
       </ContentContainer>
     </div>
   );
