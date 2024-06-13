@@ -3,14 +3,14 @@ import whiteImage from '../Assets/arrow svg.png'; // Replace with your white ima
 
 const ContactImage = ({ isDarkMode }) => {
     return (
-        <div className="top-image-container flex items-center"> {/* Use flexbox to align items */}
-            <p className="caption mb-2 hello relative text-sm "> LETS WORK TOGETHER </p> {/* Move caption to the left */}
+        <div className="top-image-container flex items-center justify-center flex-col mt-8"> {/* Use flexbox to align items */}
             <img 
                 src={whiteImage} 
                 alt="Top Image" 
-                className={`image ${isDarkMode ? 'dark-mode' : 'light-mode'}`} // Adjust width and height
+                className={` image ${isDarkMode ? 'dark-mode' : 'light-mode'}` } // Adjust width and height
             />
-            <h1 className="caption mb-2 hello relative text-sm mr-12 "> Contact  </h1> {/* Move caption to the left */}
+          <p className="caption mt-[-40px] hello relative text-sm mr-[200px] "> LETS WORK TOGETHER </p> {/* Move caption to the left */}
+
         </div>
     );
 };
