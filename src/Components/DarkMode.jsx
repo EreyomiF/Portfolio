@@ -11,6 +11,8 @@ import AOS from 'aos';
 import Experience from './WorkExperience';
 import ContactForm from './ContactForm';
 import ProjectGrid from './ThirdSection';
+import Footer from './Footer';
+
 
 // Define the shake animation
 const shake = keyframes`
@@ -114,20 +116,20 @@ const DarkMode = () => {
           alt="instruction icon" 
         />
       </SwitchContainer>
+
       <ContentContainer>
           <HeroSection isDarkMode={isDarkMode} data-aos="fade-up" />
         <Section>
           <GridComponent isDarkMode={isDarkMode} data-aos="fade-up" />
         </Section>
         <Section>
-          <Experience />
+          <Experience isDarkMode={isDarkMode} data-aos="fade-right" />
         </Section>
         <Section>
-          <ProjectGrid />
+          <ProjectGrid isDarkMode={isDarkMode} data-aos="fade-left" />
         </Section>
-        <Section>
-          <ContactForm isDarkMode={isDarkMode} />
-        </Section>
+          <ContactForm isDarkMode={isDarkMode} data-aos="fade-down" />
+        <Footer isDarkMode={isDarkMode} />
       </ContentContainer>
     </div>
   );

@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import Image from '../Assets/myimage-no-bg.png';
 import TextType from './TextType';
 import IconsRow from './HomeSvg';
+import 'aos/dist/aos.css';
 
 const Section = styled.section`
-  background-color: ${({ isDarkMode }) => (isDarkMode ? '#000000' : '#aaaaaa')};
+  background-color: ${({ isDarkMode }) => (isDarkMode ? '#000000' : '#F5F5F5')};
   color: ${({ isDarkMode }) => (isDarkMode ? '#ffffff' : '#000000')};
   padding-top: 0;
   margin-top: -70px;
@@ -53,7 +54,7 @@ const StyledOverlay = styled.div`
   background: ${({ isDarkMode }) =>
     isDarkMode
       ? 'radial-gradient(circle, transparent -30%, #000000 70%)'
-      : 'radial-gradient(circle, transparent -30%, #aaaaaa 60%)'};
+      : 'radial-gradient(circle, transparent -30%, #F5F5F5 60%)'};
 `;
 
 const TypingContainer = styled.p`
@@ -77,7 +78,7 @@ const StyledButton = styled.a`
   margin-right: 0.5rem; /* Adjusted margin */
   font-size: 0.7rem; /* Smaller font size */
   text-align: center;
-  border: 2px solid #6A0DAD; /* Adjusted border color */
+  border: 2px solid #805AD5 ; /* Adjusted border color */
   border-radius: 9999px; /* Fully rounded */
   background-color: transparent;
   color: ${({ isDarkMode }) => (isDarkMode ? '#ffffff' : '#000000')};
@@ -114,13 +115,13 @@ const HeroSection = ({ isDarkMode }) => {
   return (
     <Section isDarkMode={isDarkMode} className="py-4 lg:py-8">
       <div className={`grid max-w-screen-xl px-4 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12 ${isDarkMode ? 'dark' : ''}`}>
-        <div className="lg:col-span-5">
+        <div className="lg:col-span-5" data-aos="fade-down">
           <StyledImageContainer isDarkMode={isDarkMode}>
             <StyledImage src={Image} alt="mockup" isDarkMode={isDarkMode} />
             <StyledOverlay isDarkMode={isDarkMode} />
           </StyledImageContainer>
         </div>
-        <div className="lg:col-span-7 lg:col-start-6 mt-20 text-right lg:text-left">
+        <div className="lg:col-span-7 lg:col-start-6 mt-20 text-right lg:text-left" data-aos="fade-left">
           <TypingContainer className="hello font-light">
             <TextType />
           </TypingContainer>
@@ -128,7 +129,7 @@ const HeroSection = ({ isDarkMode }) => {
             isDarkMode={isDarkMode}
             className="max-w-2xl mb-2 text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight leading-none text-end"
           >
-            I AM <span className="text-purple-900">EREYOMI FUNMILOLA</span>
+            I AM <span className="text-purple-700">EREYOMI FUNMILOLA</span>
           </Title>
           <Paragraph
             isDarkMode={isDarkMode}
@@ -140,8 +141,8 @@ const HeroSection = ({ isDarkMode }) => {
             innovative solutions, always eager to learn and grow in this ever-evolving field. Whether it's
             through coding or global policy analysis, I'm driven by a desire to make a meaningful impact.
           </Paragraph>
-          <IconsRowContainer>
-            <StyledButton href="#" isDarkMode={isDarkMode}>
+          <IconsRowContainer >
+            <StyledButton href="#" isDarkMode={isDarkMode} >
               RESUME
               <svg
                 aria-hidden="true"

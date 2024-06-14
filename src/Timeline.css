@@ -27,10 +27,10 @@
 }
 
 .experience-root .btn {
-    background-color: var(--fg);
+    background-color: #805AD5; /* Purple background */
     border-radius: 0.25em;
-    color: var(--bg);
-    border-color: purple; /* Change the border color to purple */
+    color: var(--fg); /* Set text color to var(--fg) */
+    border: 2px solid #805AD5; /* Purple border */
     cursor: pointer;
     padding: 0.375em 0.75em;
     transition: background-color calc(var(--trans-dur) / 2) linear, color var(--trans-dur);
@@ -38,7 +38,21 @@
 }
 
 .experience-root .btn:hover {
-    background-color: hsl(var(--hue), 10%, 50%);
+    background-color: #6B46C1; /* Darker shade of purple on hover */
+    border-color: #6B46C1; /* Adjust border color to match */
+    color: var(--bg); /* Change text color on hover */
+}
+
+/* Dark Mode */
+.experience-root.dark .btn {
+    background-color: #805AD5; /* Purple background */
+    color: var(--bg); /* Set text color to white */
+}
+
+.experience-root.dark .btn:hover {
+    background-color: #6B46C1; /* Darker shade of purple on hover */
+    border-color: #6B46C1; /* Adjust border color to match */
+    color: var(--fg); /* Change text color on hover */
 }
 
 .experience-root .btn-group {
