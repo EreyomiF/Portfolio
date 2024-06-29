@@ -3,6 +3,7 @@ import ContactImage from './ContactMe';
 import IconsRow from './HomeSvg';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
+import Working from '../Assets/working.png';
 
 const ContactForm = ({ isDarkMode }) => {
   useEffect(() => {
@@ -22,7 +23,8 @@ const ContactForm = ({ isDarkMode }) => {
       </div>
       <div className="w-full max-w-md mx-8" data-aos="fade-down"> {/* Apply the fade-down animation */}
         <div className="flex flex-col items-center">
-          <form className={`grid grid-cols-2 gap-12 w-full shadow-md rounded-xl px-8 pt-6 pb-8 mb-4 backdrop-blur-sm ${isDarkMode ? 'bg-gray-800 bg-opacity-30' : 'bg-gray-300 bg-opacity-30'}`} data-aos="fade-down"> {/* Apply the fade-down animation and add bg styling */}
+        <img src={Working} alt="girl" className="absolute -left-20 w-40 h-auto z-50 " style={{ marginTop: '-130px' }} data-aos="fade-right" />
+           <form className={`grid grid-cols-2 gap-12 w-full mt-16 shadow-md rounded-xl px-8 pt-6 pb-8 mb-4 backdrop-blur-sm ${isDarkMode ? 'bg-gray-800 bg-opacity-30' : 'bg-gray-300 bg-opacity-30'}`} data-aos="fade-down"> {/* Apply the fade-down animation and add bg styling */}
             <div className="col-span-1">
               <div className="mb-6 border-b border-gray-700">
                 <label className={`block text-${isDarkMode ? 'white' : 'gray-700'} text-sm font-bold mb-2`} htmlFor="name">
