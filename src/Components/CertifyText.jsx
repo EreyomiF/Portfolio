@@ -27,7 +27,7 @@ const CertifyText = ({ isDarkMode }) => {
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-          TROCAH <br /> 128 city Road, London, United Kingdom, EC1V 2NX
+          TROCAH TECHNOLOGY LIMITED <br /> 128 city Road, London, United Kingdom, EC1V 2NX
           </h5>
           <p className="mb-0 text-xs">Front-end Developer</p>
           <p className="mb-0 text-xs">2023-Present</p>
@@ -35,14 +35,14 @@ const CertifyText = ({ isDarkMode }) => {
 
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            THINK ELOQUENTLY LAGOS NG
+            THINK ELOQUENTLY <br /> Lagos Nigeria
           </h5>
           <p className="mb-0 text-xs">Internship Completion Certification</p>
           <p className="mb-0 text-xs">2021-2023</p>
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            INTERN CHOICE INDIA REMOTE
+            INTERN CHOICE <br /> India Remote
           </h5>
           <p className="mb-0 text-xs">
             Web development Internship <br /> Certificate
@@ -51,7 +51,7 @@ const CertifyText = ({ isDarkMode }) => {
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            UDEMY INC. REMOTE
+            UDEMY INC. <br /> Remote
           </h5>
           <p className="mb-0 text-xs">
             Full Stack Web development <br />
@@ -61,7 +61,7 @@ const CertifyText = ({ isDarkMode }) => {
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            UDEMY INC. REMOTE
+            UDEMY INC. <br /> Remote
           </h5>
           <p className="mb-0 text-xs">React J.S Course Completion</p>
           <p className="mb-0 text-xs">2023-present</p>
