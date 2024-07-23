@@ -42,7 +42,7 @@ const CertifyText = ({ isDarkMode }) => {
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            INTERN CHOICE INDIA (REMOTE)
+            INTERN CHOICE INDIA REMOTE
           </h5>
           <p className="mb-0 text-xs">
             Web development Internship <br /> Certificate
@@ -51,7 +51,7 @@ const CertifyText = ({ isDarkMode }) => {
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            UDEMY INC. (REMOTE)
+            UDEMY INC. REMOTE
           </h5>
           <p className="mb-0 text-xs">
             Full Stack Web development <br />
@@ -61,7 +61,7 @@ const CertifyText = ({ isDarkMode }) => {
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            UDEMY INC. (REMOTE)
+            UDEMY INC. REMOTE
           </h5>
           <p className="mb-0 text-xs">React J.S Course Completion</p>
           <p className="mb-0 text-xs">2023-present</p>
