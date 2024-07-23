@@ -16,7 +16,7 @@ const CertifyText = ({ isDarkMode }) => {
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            BACHELOR OF ARTS (Federal university Oye-Ekiti)
+            BACHELOR OF ARTS <br /> Federal university Oye-Ekiti
           </h5>
           <p className="mb-0 text-xs">
             History and International Relations
@@ -27,7 +27,7 @@ const CertifyText = ({ isDarkMode }) => {
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-          TROCAH (128 city Road, London, United Kingdom, EC1V 2NX)
+          TROCAH <br /> 128 city Road, London, United Kingdom, EC1V 2NX
           </h5>
           <p className="mb-0 text-xs">Front-end Developer</p>
           <p className="mb-0 text-xs">2023-Present</p>
@@ -35,7 +35,7 @@ const CertifyText = ({ isDarkMode }) => {
 
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            THINK ELOQUENTLY (LAGOS NG)
+            THINK ELOQUENTLY LAGOS NG
           </h5>
           <p className="mb-0 text-xs">Internship Completion Certification</p>
           <p className="mb-0 text-xs">2021-2023</p>
