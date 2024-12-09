@@ -47,33 +47,33 @@ const Carousel = () => {
             </div>
 
             {/* Carousel wrapper */}
-            <div className="w-60 h-40 relative max-w-full mx-auto dark:bg-gray-800">
-            <div className="relative w-full h-full overflow-hidden rounded-lg">
+            <div className="w-60 h-40 relative max-w-full flex items-center justify-center dark:bg-gray-800 p-0 m-0">
+                <div className="relative w-full h-full overflow-hidden rounded-lg">
                     {images.map((src, index) => (
-                        <div
-                            key={index}
-                            className={`absolute inset-0 transition-all duration-700 ease-in-out ${index === activeIndex ? 'opacity-100' : 'opacity-0'}`}
-                            style={{ display: index === activeIndex ? 'block' : 'none' }}
-                            data-carousel-item
-                        >
-                            <img 
-                                src={src} 
-                                className="h-auto max-w-full border-4" 
-                                style={{ 
-                                    maxWidth: '100%', 
-                                    maxHeight: '100%', 
-                                    border: '4px solid #6A0DAD' 
-                                }} 
-                                alt={`Slide ${index + 1}`} 
-                            />
-                        </div>
+                    <div
+                        key={index}
+                        className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                        index === activeIndex ? 'opacity-100' : 'opacity-0'
+                        }`}
+                        data-carousel-item
+                    >
+                        <img
+                        src={src}
+                        className="w-full h-full object-cover border-4"
+                        style={{
+                            border: '4px solid #6A0DAD',
+                            boxSizing: 'border-box', // Ensure the border doesn't overflow
+                        }}
+                        alt={`Slide ${index + 1}`}
+                        />
+                    </div>
                     ))}
                 </div>
-            </div>
+                </div>
 
             {/* Slider controls */}
-            <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between items-center pointer-events-none">
-                <button
+            <div className="absolute top-[65%] transform -translate-y-1/2 w-full flex justify-between items-center pointer-events-none">
+                   <button
                     type="button"
                     className="w-8 h-8 flex items-center justify-center bg-transparent hover:bg-white/50 focus:outline-none pointer-events-auto rounded-full border-2 border-purple-500"
                     onClick={handlePrev}
@@ -98,7 +98,7 @@ const Carousel = () => {
                     className="w-8 h-8 flex items-center justify-center bg-transparent hover:bg-white/50 focus:outline-none pointer-events-auto rounded-full border-2"
                     onClick={handleNext}
                     style={{ 
-                        marginRight: '-20px',  
+                        marginRight: '-50px',  
                         border: '2px solid #6A0DAD',
                         top: '50%',
 
