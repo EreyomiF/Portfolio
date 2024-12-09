@@ -16,6 +16,18 @@ const CertifyText = ({ isDarkMode }) => {
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
+            MASTERS OF ARTS <br /> Catholic University of Portugal 
+          </h5>
+          <p className="mb-0 text-xs">
+          Governance , Leadership and Democracy Studies 
+          </p>
+          <p className="mb-0 text-xs">
+         2024-Present
+         </p>
+        </div>
+
+        <div className="text-content mt-4 text-center">
+          <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
             BACHELOR OF ARTS <br /> Federal university Oye-Ekiti
           </h5>
           <p className="mb-0 text-xs">
