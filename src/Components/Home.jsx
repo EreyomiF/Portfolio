@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from '../Assets/myimage-no-bg.png';
+import Image from '../Assets/blackpics.JPG';
 import TextType from './TextType';
 import IconsRow from './HomeSvg';
 import 'aos/dist/aos.css';
@@ -41,7 +41,7 @@ const StyledImage = styled.img`
   display: block;
   width: 100%;
   height: auto;
-  filter: ${({ isDarkMode }) => (isDarkMode ? 'brightness(50%)' : 'brightness(80%) grayscale(50%)')};
+  filter: ${({ isDarkMode }) => (isDarkMode ? 'brightness(100%)' : 'brightness(100%) grayscale(100%)')};
   opacity: ${({ isDarkMode }) => (isDarkMode ? '0.7' : '1')};
 `;
 
@@ -53,8 +53,8 @@ const StyledOverlay = styled.div`
   height: 100%;
   background: ${({ isDarkMode }) =>
     isDarkMode
-      ? 'radial-gradient(circle, transparent -30%, #000000 70%)'
-      : 'radial-gradient(circle, transparent -30%, #F5F5F5 60%)'};
+      ? 'radial-gradient(circle, transparent -10%, #000000 50%)'
+      : 'radial-gradient(circle, transparent -10%, #F5F5F5 50%)'};
 `;
 
 const TypingContainer = styled.p`
