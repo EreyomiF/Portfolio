@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from '../Assets/blackpics.JPG';
+import Image from '../Assets/Blackimg2.jpg';
 import TextType from './TextType';
 import IconsRow from './HomeSvg';
 import 'aos/dist/aos.css';
@@ -28,6 +28,7 @@ const Paragraph = styled.p`
 const StyledImageContainer = styled.div`
   position: relative;
   width: 100%;
+  height:100%
   max-width: 500px;
   overflow: hidden;
   background-color: ${({ isDarkMode }) => (isDarkMode ? '#1a1a1a' : '#D9D9D9')};
@@ -41,7 +42,7 @@ const StyledImage = styled.img`
   display: block;
   width: 100%;
   height: auto;
-  filter: ${({ isDarkMode }) => (isDarkMode ? 'brightness(100%)' : 'brightness(100%) grayscale(100%)')};
+  filter: ${({ isDarkMode }) => (isDarkMode ? 'brightness(50%)' : 'brightness(80%) grayscale(100%)')};
   opacity: ${({ isDarkMode }) => (isDarkMode ? '0.7' : '1')};
 `;
 
@@ -53,8 +54,8 @@ const StyledOverlay = styled.div`
   height: 100%;
   background: ${({ isDarkMode }) =>
     isDarkMode
-      ? 'radial-gradient(circle, transparent -10%, #000000 50%)'
-      : 'radial-gradient(circle, transparent -10%, #F5F5F5 50%)'};
+      ? 'radial-gradient(circle, transparent -70%, #000000 80%)'
+      : 'radial-gradient(circle, transparent -100%, #F5F5F5 70%)'};
 `;
 
 const TypingContainer = styled.p`
