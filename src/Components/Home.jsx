@@ -54,7 +54,7 @@ const StyledOverlay = styled.div`
   height: 100%;
   background: ${({ isDarkMode }) =>
     isDarkMode
-      ? 'radial-gradient(circle, transparent -70%, #000000 80%)'
+      ? 'radial-gradient(circle, transparent -100%, #000000 60%)'
       : 'radial-gradient(circle, transparent -100%, #F5F5F5 70%)'};
 `;
 
