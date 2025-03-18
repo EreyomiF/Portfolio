@@ -1,7 +1,7 @@
 import React from 'react';
 import myImage from '../Assets/myimage.jpeg';
 import arrow2 from '../Assets/arrow svg - Copy.png';
-import myVideo from '../Assets/Myvideo2.Mp4';
+import myVideo from '../Assets/MyNewvid.Mp4';
 
 const BlurryImage = ({ isDarkMode }) => {
   return (

@@ -15,15 +15,15 @@ const ContactForm = ({ isDarkMode }) => {
   }, []);
 
   return (
-    <div className={`flex flex-col items-center h-auto`} style={{ backgroundColor: isDarkMode ? 'black' : '#F5F5F5', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' }}>
+    <div className={`flex flex-col items-center h-auto overflow-hidden`} style={{ backgroundColor: isDarkMode ? 'black' : '#F5F5F5', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' } }>
       <ContactImage isDarkMode={isDarkMode} />
       <div className="mb-8 text-center">
         <h1 className="text-3xl lg:text-4xl underline hello mb-4 mt-6 text-center text-purple-700">Contact Me</h1>
         <p className="text-gray-700 dark:text-gray-300 text-center">I usually work on several projects but I'll be happy to discuss new opportunities. Let's get in touch!</p>
       </div>
-      <div className="w-full max-w-md mx-8" data-aos="fade-down"> {/* Apply the fade-down animation */}
-        <div className="flex flex-col items-center">
-        <img src={Working} alt="girl" className="absolute -left-20 w-40 h-auto z-50 " style={{ marginTop: '-130px' }} data-aos="fade-right" />
+      <div className="w-full max-w-md mx-8 mt-8" data-aos="fade-down"> {/* Apply the fade-down animation */}
+        <div className="flex flex-col items-center mt-8">
+        <img src={Working} alt="girl" className="absolute -right-[45px] w-40 h-auto z-50 -top-[150px] md:-left-[70px] md:-top-[100px]  " data-aos="fade-right" />
            <form className={`grid grid-cols-2 gap-12 w-full mt-16 shadow-md rounded-xl px-8 pt-6 pb-8 mb-4 backdrop-blur-sm ${isDarkMode ? 'bg-gray-800 bg-opacity-30' : 'bg-gray-300 bg-opacity-30'}`} data-aos="fade-down"> {/* Apply the fade-down animation and add bg styling */}
             <div className="col-span-1">
               <div className="mb-6 border-b border-gray-700">
