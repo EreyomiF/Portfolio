@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import purityCup from '../Assets/puritycup.webp';
 
+
+
 const Navbar = ({ isDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
 

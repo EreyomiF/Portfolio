@@ -12,6 +12,7 @@ import Experience from './WorkExperience';
 import ContactForm from './ContactForm';
 import ProjectGrid from './ThirdSection';
 import Footer from './Footer';
+import { motion } from 'framer-motion';
 
 
 // Define the shake animation
@@ -102,7 +103,6 @@ const DarkMode = () => {
       }}
     >
       <Navbar isDarkMode={isDarkMode} />
-
       <SwitchContainer>
         <Icon 
           src={LightBulbIcon} 
@@ -116,7 +116,11 @@ const DarkMode = () => {
           alt="instruction icon" 
         />
       </SwitchContainer>
-
+      <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    > 
       <ContentContainer>
           <HeroSection isDarkMode={isDarkMode} data-aos="fade-up" />
         <Section>
@@ -131,7 +135,9 @@ const DarkMode = () => {
           <ContactForm isDarkMode={isDarkMode} data-aos="fade-down" />
         <Footer isDarkMode={isDarkMode} />
       </ContentContainer>
+      </motion.div>
     </div>
+    
   );
 };
 
