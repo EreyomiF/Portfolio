@@ -99,7 +99,18 @@ const InstructionIcon = styled.img`
   }
 `;
 
-
+const ContentContainer = styled.div`
+  padding-top: 70px; /* Default padding */
+  
+  @media (max-width: 640px) {
+    /* Adjust padding top if SwitchContainer's new position/size requires it */
+    /* Example: if SwitchContainer is now taller or positioned lower on small screens */
+     padding-top: 120px; /* Increased to give more space for centered SwitchContainer */
+  }
+   @media (max-width: 360px) {
+     padding-top: 100px; 
+   }
+`;
 
 const Section = styled.div`
   margin: 20px 0;
