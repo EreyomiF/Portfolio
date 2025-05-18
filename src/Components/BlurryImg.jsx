@@ -1,13 +1,13 @@
 import React from 'react';
 import myImage from '../Assets/myimage.jpeg';
 import arrow2 from '../Assets/arrow svg - Copy.png';
-import myVideo from '../Assets/MyNewvid.Mp4';
+import myVideo from '../Assets/AshCloth.MP4';
 
 const BlurryImage = ({ isDarkMode }) => {
   return (
     <div className="flex flex-col items-center justify-center relative">
     <video
-     className="max-w-xl transition-all duration-300 w-100 h-[40rem] blur-sm hover:blur-none"
+     className="max-w-xl lg:w-[300px] lg:h-auto transition-all duration-300 w-100 h-[40rem] blur-sm hover:blur-none"
      src={myVideo}
       autoPlay
       loop

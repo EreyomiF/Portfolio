@@ -18,7 +18,7 @@ const FavQuote = ({ isDarkMode }) => {
         className={`w-20 ml-8 h-20 ${isDarkMode ? 'dark-mode' : 'light-mode'}`} 
         style={{ transform: 'translateY(30px)' }} 
       />
-      <p className="caption  mb-2 hello relative text-sm transform translate-y-[-20px]"
+      <p className="caption  mb-2 hello relative text-sm transform translate-y-[-20px] "
       style={{  transform: 'translateY(-35px)',marginRight: '150px' }}
         >
        "Stay hungry, Stay foolish" <br />

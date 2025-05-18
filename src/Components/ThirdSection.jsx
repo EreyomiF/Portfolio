@@ -17,7 +17,7 @@ const ProjectGrid = ({ isDarkMode }) => {
     return (
         <div className={`flex flex-col items-center mt-16 mb-16 ${isDarkMode ? 'dark' : ''}`}>
             <ProjectArrow />
-            <div className="mb-8 text-center">
+            <div className="mb-8 lg:mb-8 text-center">
                 <h1 className="text-3xl lg:text-4xl underline hello mb-4 mt-6 text-center text-purple-700">Projects</h1>
                 <p className="text-gray-700 dark:text-gray-300 text-center ">
                     Following projects showcase my skills and experience through real-world 

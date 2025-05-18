@@ -94,6 +94,8 @@ ul[class^=ring] li {
   box-shadow: none;
 }
 
+
+/* --- MODIFICATIONS FOR RING 0 --- */
 .ring-0 {
   width: 100%;
   height: 100%;
@@ -103,20 +105,22 @@ ul[class^=ring] li {
   animation: counterClockwiseRotate 35s linear infinite;
 }
 
+
+/* Adjusted for 5 items - 72deg increments */
 .ring-0 > *:nth-of-type(1) {
-  transform: rotate(95deg) translate(8em) rotate(-95deg);
+  transform: rotate(72deg) translate(8em) rotate(-72deg);
 }
-
 .ring-0 > *:nth-of-type(2) {
-  transform: rotate(190deg) translate(8em) rotate(-190deg);
+  transform: rotate(144deg) translate(8em) rotate(-144deg); /* 72*2 */
 }
-
 .ring-0 > *:nth-of-type(3) {
-  transform: rotate(285deg) translate(8em) rotate(-285deg);
+  transform: rotate(216deg) translate(8em) rotate(-216deg); /* 72*3 */
 }
-
 .ring-0 > *:nth-of-type(4) {
-  transform: rotate(380deg) translate(8em) rotate(-380deg);
+  transform: rotate(288deg) translate(8em) rotate(-288deg); /* 72*4 */
+}
+.ring-0 > *:nth-of-type(5) { /* ADDED for the 5th item */
+  transform: rotate(360deg) translate(8em) rotate(-360deg); /* 72*5 */
 }
 
 .ring-1 {
@@ -140,7 +144,7 @@ ul[class^=ring] li {
   transform: rotate(380deg) translate(6em) rotate(-380deg);
 }
 
-.ring-2 {
+/*.ring-2 {
   width: 60%;
   height: 60%;
   animation: clockwiseRotate 25s linear infinite;
@@ -179,7 +183,35 @@ ul[class^=ring] li {
 
 .ring-2 > *:nth-of-type(8) {
   transform: rotate(380deg) translate(5em) rotate(-380deg);
+}*/
+
+/* Adjusted for 5 items - 72deg increments */
+/* --- MODIFICATIONS FOR RING 2 --- */
+.ring-2 {
+  width: 60%;
+  height: 60%;
+  animation: clockwiseRotate 25s linear infinite;
 }
+.ring-2 i {
+  animation: counterClockwiseRotate 25s linear infinite;
+}
+
+.ring-2 > *:nth-of-type(1) {
+  transform: rotate(72deg) translate(5em) rotate(-72deg);
+}
+.ring-2 > *:nth-of-type(2) {
+  transform: rotate(144deg) translate(5em) rotate(-144deg); /* 72*2 */
+}
+.ring-2 > *:nth-of-type(3) {
+  transform: rotate(216deg) translate(5em) rotate(-216deg); /* 72*3 */
+}
+.ring-2 > *:nth-of-type(4) {
+  transform: rotate(288deg) translate(5em) rotate(-288deg); /* 72*4 */
+}
+.ring-2 > *:nth-of-type(5) {
+  transform: rotate(360deg) translate(5em) rotate(-360deg); /* 72*5 */
+}
+
 
 .ring-3 {
   width: 40%;
@@ -362,6 +394,99 @@ icons
   color: white;
 }
 
+/* Add these new styles to your existing CSS file */
+
+/* --- Ring 0 Icons (Frontend Core) --- */
+/* .fa-html5 is already styled in your existing CSS:
+.fa-html5 {
+  background: white;
+  color: #e65100;
+}
+*/
+
+.fa-css3-alt { /* For CSS3 alternative icon */
+  background: white;
+  color: #2196f3; /* Same as your .fa-css3 style */
+}
+
+.fa-js-square { /* JavaScript */
+  background: #f0db4f; /* JS Yellow */
+  color: #323330;    /* Dark text for contrast */
+}
+
+.fa-react { /* React */
+  background: #20232a; /* React Dark Background */
+  color: #61dafb;    /* React Blue */
+}
+
+.fa-layer-group { /* Tailwind CSS placeholder (or your chosen icon) */
+  background: #38b2ac; /* Tailwind's Teal color */
+  color: white;
+}
+
+/* --- Ring 1 Icons (Version Control & Project Management) --- */
+.fa-git-alt { /* For Git alternative icon */
+  background: #DE4C36; /* Git's reddish-orange */
+  color: white;
+  /* Your original .fa-git was { background: #222; color: white; }
+     You can use that if you prefer, or this brand color. */
+}
+
+.fa-github { /* GitHub */
+  background: #181717; /* GitHub Black */
+  color: white;
+}
+
+.fa-jira { /* Jira */
+  background: #0052CC; /* Jira Blue */
+  color: white;
+}
+
+/* --- Ring 2 Icons (Backend, Tools & Environment) --- */
+.fa-node-js { /* Node.js */
+  background: #68A063; /* Node Green */
+  color: white;
+}
+
+/* .fa-terminal is already styled in your existing CSS:
+.fa-terminal {
+  background: #222;
+  color: #fff;
+}
+*/
+
+.fa-database { /* Database */
+  background: #00758F; /* Deep Teal/Blue */
+  color: white;
+}
+
+.fa-cloud { /* Cloud/API/Deployment */
+  background: #007BFF; /* Bright Blue */
+  color: white;
+}
+
+.fa-npm { /* NPM */
+  background: #CB3837; /* NPM Red */
+  color: white;
+}
+
+/* --- Ring 3 Icons (General Dev / Other Important Tools) --- */
+/* .fa-coffee is already styled in your existing CSS:
+.fa-coffee {
+  background: #4CAF50;
+  color: #CDDC39;
+}
+*/
+
+.fa-bug { /* Debugging */
+  background: #D9534F; /* Reddish color for "bug" */
+  color: white;
+}
+
+.fa-file-code { /* IDE/Editor placeholder (e.g., VS Code-like) */
+  background: #007ACC; /* VS Code-like Blue */
+  color: white;
+}
 
 /* src/styles/styles.css */
 .light-mode {

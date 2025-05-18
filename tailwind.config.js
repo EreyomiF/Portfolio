@@ -6,8 +6,9 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'xs': '480px',  // Example of adding a custom small screen size
+        'xs': '320px',  // Example of adding a custom small screen size
         // ... other custom breakpoints
+        '3xl': '3000px', // Your custom breakpoint for 3000px and up
       },
 
     },

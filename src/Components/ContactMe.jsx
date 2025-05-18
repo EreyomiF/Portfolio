@@ -3,7 +3,7 @@ import whiteImage from '../Assets/arrow svg.png'; // Replace with your white ima
 
 const ContactImage = ({ isDarkMode }) => {
     return (
-        <div className="top-image-container flex items-center justify-center flex-col mt-8 "> {/* Use flexbox to align items */}
+        <div className="top-image-container flex items-center justify-center flex-col mt-8"> {/* Use flexbox to align items */}
             <img 
                 src={whiteImage} 
                 alt="Top Image" 

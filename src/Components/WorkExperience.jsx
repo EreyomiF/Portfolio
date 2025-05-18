@@ -11,7 +11,6 @@ const TimelineItem = ({ date, title, subtitle, description }) => {
     setExpanded(!expanded);
   };
 
-  // Define bullet points array
   const bulletPoints = description.split('\n');
 
   return (
@@ -44,8 +43,7 @@ const TimelineItem = ({ date, title, subtitle, description }) => {
         aria-labelledby={`item-${date}-name`}
         aria-hidden={!expanded}
       >
-        <div className="timeline__item-body-content  ">
-          {/* Render bullet points as a list */}
+        <div className="timeline__item-body-content">
           <ul className="custom-list">
             {bulletPoints.map((point, index) => (
               <li key={index}>{point}</li>
@@ -60,25 +58,36 @@ const TimelineItem = ({ date, title, subtitle, description }) => {
 const Experience = () => {
   useEffect(() => {
     AOS.init({
-      duration: 2000, // Animation duration in milliseconds
-      once: false, // Whether animation should happen only once - while scrolling down
-      offset: 200, // Offset (in px) from the original trigger point
+      duration: 2000,
+      once: false,
+      offset: 200,
     });
   }, []);
 
   return (
-    <div className="experience-root mt-[-100px]" data-aos="fade-up"> {/* Apply the scoped CSS class */}
+    <div className="experience-root mt-[-100px]" data-aos="fade-up">
       <svg display="none">
         <symbol id="arrow">
           <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
         </symbol>
       </svg>
-      <div className="flex justify-center ">
+      <div className="flex justify-center">
         <WorkArrow className="" />
       </div>
-      <h1 className='hello text-purple-700 underline'> Work Experience</h1>
-      <div id="timeline" className="timeline">
-        <div className="btn-group">
+      {/* Center the heading text on all screens, or use lg:text-center for large screens only */}
+      <h1 className='hello text-purple-700 underline text-center py-4'>Work Experience</h1>
+
+      {/*
+        To center the timeline on large screens:
+        1. Add lg:mx-auto to center it horizontally.
+        2. Add a lg:max-w- (e.g., lg:max-w-4xl, lg:max-w-5xl, or lg:max-w-screen-lg)
+           to give the timeline container a maximum width on large screens.
+           mx-auto needs a constrained width to effectively center the element.
+           Adjust the max-width value based on your design preference.
+      */}
+      <div id="timeline" className="timeline lg:mx-auto lg:max-w-4xl xl:max-w-5xl">
+        {/* Center the button group within the timeline container */}
+        <div className="btn-group text-center py-2"> {/* Added text-center and some padding */}
           <button className="btn" type="button" data-action="expand">Expand All</button>
           <button className="btn" type="button" data-action="collapse">Collapse All</button>
         </div>
@@ -86,30 +95,26 @@ const Experience = () => {
           date="2022-Present"
           title="Think Eloquently"
           subtitle="Front-end developer"
-          description={``}
+          description={""}
         />
          <TimelineItem
           date="2023-Present"
           title="Trocah Technology Limited"
           subtitle="Front-end developer"
-          description={``}
+          description={""}
         />
-
-
         <TimelineItem
           date="August 2023"
           title="INTERNCHOICE"
           subtitle="Web developer"
-          description={``}
+          description={""}
         />
-
         <TimelineItem
           date="2023-Present"
           title="Cup of Purity"
           subtitle="Free-lance web-developer"
-          description={``}
+          description={""}
         />
-
       </div>
     </div>
   );
