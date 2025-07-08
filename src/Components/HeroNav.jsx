@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import purityCup from '../Assets/puritycup.webp';
+import purityCup from '../Assets/pureLogo.png';
 
 
 

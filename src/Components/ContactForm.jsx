@@ -15,7 +15,7 @@ const ContactForm = ({ isDarkMode }) => {
   }, []);
 
   return (
-    <div className={`flex flex-col items-center h-auto overflow-hidden -mt-6  md:-mt-6 lg:-mt-6 `} style={{ backgroundColor: isDarkMode ? 'black' : '#F5F5F5', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' } }>
+    <div className={`flex flex-col items-center h-auto overflow-hidden -mt-6  md:-mt-6 lg:-mt-6 pb-40 `} style={{ backgroundColor: isDarkMode ? 'black' : '#F5F5F5', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)' } }>
       <ContactImage isDarkMode={isDarkMode} />
       <div className="mb-8 text-center">
         <h1 className="text-3xl lg:text-4xl underline hello mb-4 mt-6 text-center text-purple-700">Contact Me</h1>
