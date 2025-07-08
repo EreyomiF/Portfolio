@@ -13,23 +13,25 @@ const Footer = ({ isDarkMode }) => {
   }, []);
 
   return (
-    <footer
-      className={`
-        fixed bottom-0 left-0 w-full z-10
-        transition-opacity duration-500
-        ${showFooter ? 'opacity-100' : 'opacity-0 pointer-events-none'}
-        ${isDarkMode ? 'bg-black' : 'bg-white'}
-        border-t border-purple-700 border-opacity-65 shadow-xl
-        h-30 md:h-30 overflow-visible 
-      `}
-    >
+        <footer
+        className={`
+            fixed bottom-0 left-1/2 transform -translate-x-1/2
+            w-[99%] md:w-[98%]
+            z-10
+            transition-opacity duration-500
+            ${showFooter ? 'opacity-100' : 'opacity-0 pointer-events-none'}
+            ${isDarkMode ? 'bg-black' : 'bg-white'}
+            border-t border-l border-r border-purple-700 border-opacity-65 shadow-xl
+            h-30 md:h-30 overflow-visible rounded-t-xl
+        `}
+        >
       {/* Image overlapping the top center */}
 {/* Image overlapping the top center */}
-        <div className="absolute -top-[105px] left-1/2 transform -translate-x-1/2 z-20 hidden md:block sm:block ">
+        <div className="absolute -top-[140px] left-1/2 transform -translate-x-1/2 z-20 hidden md:block sm:block ">
         <img
             src={centerLogo}
             alt="Center Logo"
-            className="h-[200px] w-auto object-contain rounded-md"
+            className="h-[240px] w-auto object-contain rounded-md"
         />
         </div>
 
