@@ -232,14 +232,15 @@ const HeroSection = ({ isDarkMode }) => {
             isDarkMode={isDarkMode}
             className="max-w-2xl font-light text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl text-end mt-4 md:mt-6 lg:mt-8"
           >
-            I am a graduate of International Relations with a strong passion for software development.
-            Combining my understanding of global dynamics with technical expertise, I bring a unique
-            perspective to my work in the tech industry. I thrive on solving complex problems and creating
-            innovative solutions, always eager to learn and grow in this ever-evolving field. Whether it's
-            through coding or global policy analysis, I'm driven by a desire to make a meaningful impact.
+            Technical Recruiter and Talent Acquisition Specialist with 3+ years of dedicated technical
+            hiring, built on nearly three years as a frontend developer in JavaScript, React and TypeScript.
+            That engineering background lets me assess engineering candidates at code level instead of
+            escalating every screen to the hiring team. I own full-cycle technical recruitment across
+            software engineering, DevOps, QA, mobile, data, cloud and leadership hires in fast-paced fintech,
+            and have closed 15+ technical roles. Based in Lisbon, open to hybrid or remote work.
           </Paragraph>
           <IconsRowContainer >
-            <StyledButton href="#" isDarkMode={isDarkMode} >
+            <StyledButton href="/Funmilola-Ereyomi-CV.pdf" target="_blank" rel="noopener noreferrer" isDarkMode={isDarkMode} >
               RESUME
               <svg
                 aria-hidden="true"

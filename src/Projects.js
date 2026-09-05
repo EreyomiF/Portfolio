@@ -2,8 +2,8 @@ const ProjectData = [
   {
     id: 1,
     imgSrc: "/Images/Kanban.png",
-    title: "Kanban Board App",
-    description: "A project management tool for organizing tasks into boards, columns, and cards.",
+    title: "Kanban Candidate Tracker",
+    description: "A Kanban-based candidate tracking tool built in React, TypeScript and Tailwind CSS to manage pipeline visibility and follow-up across concurrent searches.",
     link: "https://kan-ban-app-react.vercel.app/"
   },
   {

@@ -2,7 +2,7 @@ import React from 'react';
 import TypingText from './TypingText';
 
 const TextType = () => {
-  const texts = ['"Hello, world!"', '"Welcome to my site."', '"Enjoy your stay!"'];
+  const texts = ['"Technical Recruiter"', '"Talent Acquisition Specialist"', '"Tech Hiring"'];
 
   return (
     <div>

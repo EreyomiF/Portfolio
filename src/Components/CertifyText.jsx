@@ -16,67 +16,91 @@ const CertifyText = ({ isDarkMode }) => {
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            MASTERS OF ARTS <br /> Catholic University of Portugal 
+            MASTER OF ARTS <br /> Universidade Catolica Portuguesa
           </h5>
           <p className="mb-0 text-xs">
-          Governance , Leadership and Democracy Studies 
+            Leadership, Governance and Democracy Studies
           </p>
           <p className="mb-0 text-xs">
-         2024-Present
-         </p>
-        </div>
-
-        <div className="text-content mt-4 text-center">
-          <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            BACHELOR OF ARTS <br /> Federal university Oye-Ekiti
-          </h5>
-          <p className="mb-0 text-xs">
-            History and International Relations
-          </p>
-          <p className="mb-0 text-xs">
-            2017-2022
+            Sep 2024 - Present
           </p>
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-          TROCAH TECHNOLOGY LIMITED <br /> 128 city Road, London, United Kingdom, EC1V 2NX
-          </h5>
-          <p className="mb-0 text-xs">Front-end Developer</p>
-          <p className="mb-0 text-xs">2023-Present</p>
-        </div>
-
-        <div className="text-content mt-4 text-center">
-          <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            THINK ELOQUENTLY <br /> Lagos Nigeria
-          </h5>
-          <p className="mb-0 text-xs">Internship Completion Certification</p>
-          <p className="mb-0 text-xs">2021-2023</p>
-        </div>
-        <div className="text-content mt-4 text-center">
-          <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            INTERN CHOICE <br /> India Remote
+            BACHELOR OF ARTS <br /> Federal University of Oye-Ekiti
           </h5>
           <p className="mb-0 text-xs">
-            Web development Internship <br /> Certificate
+            International Relations - CGPA 3.50 / 5.00 (Second Class Upper)
           </p>
-          <p className="mb-0 text-xs">2023</p>
+          <p className="mb-0 text-xs">
+            Aug 2017 - Dec 2021
+          </p>
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            UDEMY INC. <br /> Remote
+            PHR EXAM PREPARATION <br /> HRCI via Udemy
           </h5>
           <p className="mb-0 text-xs">
-            Full Stack Web development <br />
-            Bootcamp
+            Human Resources Certification
           </p>
-          <p className="mb-0 text-xs">2022-2023</p>
+          <p className="mb-0 text-xs">
+            Jul 2026
+          </p>
         </div>
         <div className="text-content mt-4 text-center">
           <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
-            UDEMY INC. <br /> Remote
+            IT RECRUITERS BOOTCAMP <br /> Udemy
           </h5>
-          <p className="mb-0 text-xs">React J.S Course Completion</p>
-          <p className="mb-0 text-xs">2023-present</p>
+          <p className="mb-0 text-xs">
+            Mastering the Art of Tech Hiring - 8 hrs
+          </p>
+          <p className="mb-0 text-xs">
+            Jun 2026
+          </p>
+        </div>
+        <div className="text-content mt-4 text-center">
+          <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
+            RECRUITER TRAINING <br /> Udemy
+          </h5>
+          <p className="mb-0 text-xs">
+            Talent Acquisition, Beginner to Advanced - 10 hrs
+          </p>
+          <p className="mb-0 text-xs">
+            Jun 2026
+          </p>
+        </div>
+        <div className="text-content mt-4 text-center">
+          <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
+            LEARNING AND DEVELOPMENT <br /> HRCI authorized course via Coursera
+          </h5>
+          <p className="mb-0 text-xs">
+            Talent development and training design
+          </p>
+          <p className="mb-0 text-xs">
+            Jun 2026
+          </p>
+        </div>
+        <div className="text-content mt-4 text-center">
+          <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
+            FULL-STACK WEB DEVELOPMENT <br /> Udemy
+          </h5>
+          <p className="mb-0 text-xs">
+            The Complete Bootcamp - 61.5 hrs
+          </p>
+          <p className="mb-0 text-xs">
+            Nov 2025
+          </p>
+        </div>
+        <div className="text-content mt-4 text-center">
+          <h5 className="text-lg font-semibold tracking-tight underline dark:text-white">
+            FRONTEND DEVELOPER INTERNSHIP <br /> Intern Choice, India
+          </h5>
+          <p className="mb-0 text-xs">
+            Internship completion certificate
+          </p>
+          <p className="mb-0 text-xs">
+            Dec 2021
+          </p>
         </div>
       </div>
     </div>
