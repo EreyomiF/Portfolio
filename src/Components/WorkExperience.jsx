@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../Timeline.css'; // Import the scoped CSS file
 import WorkArrow from './WorkArrow';
-import talenqoraLogo from '../Assets/talenqora-logo.png';
+import talenqoraLogo from '../Assets/talenqora-mark-round.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
 
@@ -33,7 +33,7 @@ const TimelineItem = ({ date, title, subtitle, description, logo }) => {
           <time className="timeline__date" dateTime={date}>{date}</time>
           <div>
             <span className="inline-flex items-center gap-2">
-              {logo && <img src={logo} alt="" className="h-6 w-auto object-contain rounded-sm" />}
+              {logo && <img src={logo} alt="" className="h-7 w-7 rounded-full object-cover" />}
               <strong className="timeline__title">{title}</strong>
             </span> <br />
             {subtitle && <span className="timeline__subtitle">{subtitle}</span>}

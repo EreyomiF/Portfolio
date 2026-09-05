@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import talenqoraLogo from '../Assets/talenqora-logo.png';
+import talenqoraLogo from '../Assets/talenqora-mark-round.png';
 
 
 
@@ -14,7 +14,7 @@ const Navbar = ({ isDarkMode }) => {
     <nav className={` ${isDarkMode ? 'bg-black' : 'bg-white'} border-t border-b border-purple-700 border-opacity-65 shadow-xl`}>
       <div className={`max-w-screen-xl mx-auto p-4 3xl:max-w-none 3xl:mx-0 flex flex-wrap items-center justify-between`}>
         <a href="#home" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src={talenqoraLogo} className="h-8 w-auto object-contain" alt="Talenqora" />
+          <img src={talenqoraLogo} className="h-9 w-9 rounded-full object-cover" alt="Talenqora" />
           <span className={`self-center text-sm font-semibold whitespace-nowrap text-purple-700`}>WELCOME!</span>
         </a>
         <button
