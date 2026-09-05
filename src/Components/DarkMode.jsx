@@ -166,21 +166,25 @@ const DarkMode = () => {
         transition={{ duration: 0.8 }}
       > 
         <ContentContainer>
-            <HeroSection isDarkMode={isDarkMode} data-aos="fade-up" />
-          <Section>
+            <div id="home">
+              <HeroSection isDarkMode={isDarkMode} data-aos="fade-up" />
+            </div>
+          <Section id="about">
             <GridComponent isDarkMode={isDarkMode} data-aos="fade-up" />
           </Section>
-          <Section>
+          <Section id="experience">
             <Experience isDarkMode={isDarkMode} data-aos="fade-right" />
           </Section>
-          <Section>
+          <Section id="projects">
             <ProjectGrid isDarkMode={isDarkMode} data-aos="fade-left" />
           </Section>
           <Section>
             <WorkTogether isDarkMode={isDarkMode} data-aos="fade-right" />
           </Section>
 
-            <ContactForm isDarkMode={isDarkMode} data-aos="fade-down" />
+            <div id="contact">
+              <ContactForm isDarkMode={isDarkMode} data-aos="fade-down" />
+            </div>
           <Footer isDarkMode={isDarkMode} />
         </ContentContainer>
       </motion.div>

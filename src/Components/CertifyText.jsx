@@ -9,7 +9,7 @@ const CertifyText = ({ isDarkMode }) => {
           <p className="hello relative text-sm transform translate-y-[55px] mr-40">My qualifications</p>
           <img
             src={arrow3}
-            alt="Top Image"
+            alt=""
             className={`image ${isDarkMode ? 'dark-mode' : 'light-mode'} ml-20`}
             style={{ marginBottom: '-1rem', marginLeft: 'auto', marginRight: 'auto' }}
           />

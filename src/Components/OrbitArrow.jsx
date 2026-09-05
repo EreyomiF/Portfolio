@@ -9,7 +9,7 @@ const OrbitArrow = ({ isDarkMode }) => {
         > {/* Use flexbox to align items */}
             <img 
                 src={whiteImage} 
-                alt="Top Image" 
+                alt="" 
                 className={`image ${isDarkMode ? 'dark-mode' : 'light-mode'}`} // Adjust width and height
                 style={{  transform: 'translateY(10px)', marginRight:'-160px'}}  // Move the image up by 450px
             />

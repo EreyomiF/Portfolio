@@ -13,7 +13,7 @@ const Navbar = ({ isDarkMode }) => {
   return (
     <nav className={` ${isDarkMode ? 'bg-black' : 'bg-white'} border-t border-b border-purple-700 border-opacity-65 shadow-xl`}>
       <div className={`max-w-screen-xl mx-auto p-4 3xl:max-w-none 3xl:mx-0 flex flex-wrap items-center justify-between`}>
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="#home" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={talenqoraLogo} className="h-8 w-auto object-contain" alt="Talenqora" />
           <span className={`self-center text-sm font-semibold whitespace-nowrap text-purple-700`}>WELCOME!</span>
         </a>
@@ -33,16 +33,16 @@ const Navbar = ({ isDarkMode }) => {
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
           <ul className={`font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg text-sm md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 `}>
             <li>
-              <a href="#" className={`block py-2 px-3 ${isDarkMode ? 'text-white hover:text-purple-700  md:text-white md:hover:text-purple-700' : 'text-gray-900 hover:text-purple-700 hover:bg-gray-100 md:hover:bg-transparent'} rounded md:bg-transparent md:p-0`} aria-current="page">HOME</a>
+              <a href="#home" className={`block py-2 px-3 ${isDarkMode ? 'text-white hover:text-purple-700  md:text-white md:hover:text-purple-700' : 'text-gray-900 hover:text-purple-700 hover:bg-gray-100 md:hover:bg-transparent'} rounded md:bg-transparent md:p-0`} aria-current="page">HOME</a>
             </li>
             <li>
-              <a href="#" className={`block py-2 px-3 ${isDarkMode ? 'text-white hover:text-purple-700  md:text-white md:hover:text-purple-700' : 'text-gray-900 hover:text-purple-700 hover:bg-gray-100 md:hover:bg-transparent'} rounded md:bg-transparent md:p-0`}>ABOUT</a>
+              <a href="#about" className={`block py-2 px-3 ${isDarkMode ? 'text-white hover:text-purple-700  md:text-white md:hover:text-purple-700' : 'text-gray-900 hover:text-purple-700 hover:bg-gray-100 md:hover:bg-transparent'} rounded md:bg-transparent md:p-0`}>ABOUT</a>
             </li>
             <li>
-              <a href="#" className={`block py-2 px-3 ${isDarkMode ? 'text-white hover:text-purple-700 md:text-white md:hover:text-purple-700' : 'text-gray-900 hover:text-purple-700 hover:bg-gray-100 md:hover:bg-transparent'} rounded md:bg-transparent md:p-0`}>PROJECTS</a>
+              <a href="#projects" className={`block py-2 px-3 ${isDarkMode ? 'text-white hover:text-purple-700 md:text-white md:hover:text-purple-700' : 'text-gray-900 hover:text-purple-700 hover:bg-gray-100 md:hover:bg-transparent'} rounded md:bg-transparent md:p-0`}>PROJECTS</a>
             </li>
             <li>
-              <a href="#" className={`block py-2 px-3 ${isDarkMode ? 'text-white hover:text-purple-700  md:text-white md:hover:text-purple-700' : 'text-gray-900 hover:text-purple-700 hover:bg-gray-100 md:hover:bg-transparent'} rounded md:bg-transparent md:p-0`}>CONTACT ME</a>
+              <a href="#contact" className={`block py-2 px-3 ${isDarkMode ? 'text-white hover:text-purple-700  md:text-white md:hover:text-purple-700' : 'text-gray-900 hover:text-purple-700 hover:bg-gray-100 md:hover:bg-transparent'} rounded md:bg-transparent md:p-0`}>CONTACT ME</a>
             </li>
           </ul>
         </div>

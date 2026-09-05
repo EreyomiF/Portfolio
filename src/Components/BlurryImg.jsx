@@ -1,5 +1,4 @@
 import React from 'react';
-import myImage from '../Assets/myimage.jpeg';
 import arrow2 from '../Assets/arrow svg - Copy.png';
 import myVideo from '../Assets/AshCloth.MP4';
 
@@ -17,7 +16,7 @@ const BlurryImage = ({ isDarkMode }) => {
       <p className="caption mr-20  hello relative text-sm mt-4" style={{ marginTop: '30px' }}>ME!!</p> 
       <img 
         src={arrow2} 
-        alt="Arrow Image" 
+        alt="" 
         className={`w-20 h-20 ${isDarkMode ? 'dark-mode' : 'light-mode'}`} 
         style={{ marginTop: '-50px' }} // Adjust margin to move arrow independently
       />

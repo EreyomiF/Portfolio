@@ -8,7 +8,7 @@ const TopImage = ({ isDarkMode }) => {
             <p className="caption mb-2 hello relative text-sm "> My certificates </p> {/* Move caption to the left */}
             <img 
                 src={whiteImage} 
-                alt="Top Image" 
+                alt="" 
                 className={`image ${isDarkMode ? 'dark-mode' : 'light-mode'}`} // Adjust width and height
             />
         </div>
