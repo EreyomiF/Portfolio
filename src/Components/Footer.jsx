@@ -44,7 +44,7 @@ const Footer = ({ isDarkMode }) => {
             } mb-3 md:mb-0 text-center md:text-left`}
           >
             © {currentYear}{' '}
-            <a href="" className="hover:underline">
+            <a href="https://github.com/EreyomiF" target="_blank" rel="noopener noreferrer" className="hover:underline">
               EreyomiF
             </a>. Made with 💜 .
           </span>
@@ -60,7 +60,7 @@ const Footer = ({ isDarkMode }) => {
             </li>
             <li>
               <a
-                href="https://www.instagram.com/devs_nerds_exploration?igsh=aDF0d2x6bnR4YThu&utm_source=qr"
+                href="https://www.instagram.com/talenqora/" target="_blank" rel="noopener noreferrer"
                 className="hover:underline me-4 md:me-6"
               >
                 Instagram
@@ -68,14 +68,22 @@ const Footer = ({ isDarkMode }) => {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/in/funmilola-ereyomi-a88026268/"
+                href="https://www.linkedin.com/in/ereyomi-funmilola/" target="_blank" rel="noopener noreferrer"
                 className="hover:underline me-4 md:me-6"
               >
                 LinkedIn
               </a>
             </li>
             <li>
-              <a href="https://github.com/EreyomiF" className="hover:underline">
+              <a
+                href="https://x.com/TALENQORA" target="_blank" rel="noopener noreferrer"
+                className="hover:underline me-4 md:me-6"
+              >
+                X
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/EreyomiF" target="_blank" rel="noopener noreferrer" className="hover:underline">
                 Github
               </a>
             </li>

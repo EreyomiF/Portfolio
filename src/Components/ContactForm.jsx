@@ -4,6 +4,7 @@ import IconsRow from './HomeSvg';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
 import Working from '../Assets/working.png';
+import talenqoraBanner from '../Assets/talenqora-banner.png';
 
 const ContactForm = ({ isDarkMode }) => {
   useEffect(() => {
@@ -20,6 +21,13 @@ const ContactForm = ({ isDarkMode }) => {
       <div className="mb-8 text-center">
         <h1 className="text-3xl lg:text-4xl underline hello mb-4 mt-6 text-center text-purple-700">Contact Me</h1>
         <p className="text-gray-700 dark:text-gray-300 text-center">I usually work on several projects but I'll be happy to discuss new opportunities. Let's get in touch!</p>
+      </div>
+      <div className="w-full max-w-4xl px-4 mt-2 mb-2" data-aos="fade-up">
+        <img
+          src={talenqoraBanner}
+          alt="IT Recruiter and Talent Acquisition Specialist, Lisbon Portugal, open to opportunities"
+          className="w-full h-auto rounded-xl shadow-lg"
+        />
       </div>
       <div className="w-full max-w-md mx-8 mt-8" data-aos="fade-down"> {/* Apply the fade-down animation */}
         <div className="flex flex-col items-center mt-8">

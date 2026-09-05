@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import '../Timeline.css'; // Import the scoped CSS file
 import WorkArrow from './WorkArrow';
+import talenqoraLogo from '../Assets/talenqora-logo.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS CSS
 
-const TimelineItem = ({ date, title, subtitle, description }) => {
+const TimelineItem = ({ date, title, subtitle, description, logo }) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleClick = () => {
@@ -31,7 +32,10 @@ const TimelineItem = ({ date, title, subtitle, description }) => {
         <span id={`item-${date}-name`} className="timeline__meta">
           <time className="timeline__date" dateTime={date}>{date}</time>
           <div>
-            <strong className="timeline__title">{title}</strong> <br />
+            <span className="inline-flex items-center gap-2">
+              {logo && <img src={logo} alt="" className="h-6 w-auto object-contain rounded-sm" />}
+              <strong className="timeline__title">{title}</strong>
+            </span> <br />
             {subtitle && <span className="timeline__subtitle">{subtitle}</span>}
           </div>
         </span>
@@ -101,6 +105,7 @@ const Experience = () => {
           date="Nov 2025 - Present"
           title="Talenqora"
           subtitle="Founder - Nigeria (Remote, Part-time)"
+          logo={talenqoraLogo}
           description={"Founded and run an early-stage recruiting startup connecting African talent with global remote job opportunities, sourcing candidates and posting relevant openings.\nCreate and publish career content, CV tips, job openings and recruiting insights across LinkedIn, Twitter/X, Instagram and TikTok to grow engagement and support candidate sourcing."}
         />
         <TimelineItem
