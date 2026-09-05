@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 // Assuming image imports are correct
 import image1 from '../Assets/WhatsApp Image 2024-05-13 at 10.01.00 PM (1).jpeg';
 import image2 from '../Assets/WhatsApp Image 2024-05-12 at 10.03.31 PM.jpeg';
@@ -7,23 +7,8 @@ import image4 from '../Assets/WhatsApp Image 2024-06-04 at 10.04.40 PM.jpeg';
 import image5 from '../Assets/WhatsApp Image 2024-06-04 at 10.04.46 PM.jpeg';
 import TopImage from './ArrowDown'; // Import the TopImage component
 
-const Carousel = () => {
+const Carousel = ({ isDarkMode }) => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [isDarkMode, setIsDarkMode] = useState(true);
-
-    useEffect(() => {
-        const handleDarkModeToggle = (event) => {
-            setIsDarkMode(event.matches);
-        };
-
-        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        setIsDarkMode(darkModeMediaQuery.matches); // Initial check
-        darkModeMediaQuery.addEventListener('change', handleDarkModeToggle);
-
-        return () => {
-            darkModeMediaQuery.removeEventListener('change', handleDarkModeToggle);
-        };
-    }, []);
 
     const images = [
         image1,

@@ -4,6 +4,7 @@
     --bg: hsl(var(--hue), 10%, 90%);
     --fg: hsl(var(--hue), 10%, 10%);
     --primary: hsl(var(--hue), 90%, 50%);
+    color: var(--fg);
     --trans-dur: 0.3s;
     --trans-timing: cubic-bezier(0.65, 0, 0.35, 1);
     font-size: calc(16px + (24 - 16) * (100vw - 320px) / (2560 - 320px));
@@ -222,3 +223,28 @@
 }
 
 
+
+
+/* Theme driven by the site's own light/dark toggle, not the OS setting.
+   Higher specificity than the prefers-color-scheme block below. */
+.experience-root.exp-light {
+    --bg: hsl(var(--hue), 10%, 90%);
+    --fg: hsl(var(--hue), 10%, 10%);
+    --primary: hsl(var(--hue), 90%, 50%);
+}
+
+.experience-root.exp-light .timeline__arrow-icon path {
+    stroke: var(--fg);
+    fill: none;
+}
+
+.experience-root.exp-dark {
+    --bg: hsl(var(--hue), 10%, 10%);
+    --fg: hsl(var(--hue), 10%, 90%);
+    --primary: hsl(var(--hue), 90%, 70%);
+}
+
+.experience-root.exp-dark .timeline__arrow-icon path {
+    stroke: #ffffff;
+    fill: none;
+}

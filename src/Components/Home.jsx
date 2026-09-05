@@ -30,7 +30,7 @@ const Title = styled.h1`
 `;
 
 const Paragraph = styled.p`
-  color: ${({ isDarkMode }) => (isDarkMode ? '#bbbbbb' : '#555555')};
+  color: ${({ isDarkMode }) => (isDarkMode ? '#bbbbbb' : '#000000')};
   margin-bottom: 24px; /* Default margin-bottom */
 
   /* Responsive margin-bottom */

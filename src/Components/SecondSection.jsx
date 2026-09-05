@@ -78,7 +78,7 @@ const GridComponent = ({ isDarkMode }) => {
                     className="col-span-1 lg:col-span-2 flex flex-col justify-start items-center w-full relative aos-left lg:-mt-40 md:justify-center sm:justify-center"
                 >
                     <div className="w-full mb-2 lg:mr-20">
-                        <Carousel />
+                        <Carousel isDarkMode={isDarkMode} />
                     </div>
                     <div className="w-full flex justify-center mt-2 lg:mt-8 lg:mr-16 mx-4">
                         <OrbitAnimation isDarkMode={isDarkMode} />

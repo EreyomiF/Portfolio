@@ -59,7 +59,7 @@ const TimelineItem = ({ date, title, subtitle, description, logo }) => {
   );
 };
 
-const Experience = () => {
+const Experience = ({ isDarkMode }) => {
   useEffect(() => {
     AOS.init({
       duration: 2000,
@@ -69,7 +69,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className="experience-root mt-[-100px]" data-aos="fade-up">
+    <div className={`experience-root ${isDarkMode ? 'exp-dark' : 'exp-light'} mt-[-100px]`} data-aos="fade-up">
       <svg display="none">
         <symbol id="arrow">
           <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
