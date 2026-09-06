@@ -104,7 +104,7 @@ const Experience = ({ isDarkMode }) => {
         <TimelineItem
           date="Nov 2025 - Present"
           title="Talenqora"
-          subtitle="Founder - Portugal (Remote, Part-time)"
+          subtitle="Founder - Lisbon, Portugal (Remote, Part-time)"
           logo={talenqoraLogo}
           description={"Founded and run an early-stage recruiting startup connecting African talent with global remote job opportunities, sourcing candidates and posting relevant openings.\nCreate and publish career content, CV tips, job openings and recruiting insights across LinkedIn, Twitter/X, Instagram and TikTok to grow engagement and support candidate sourcing."}
         />
